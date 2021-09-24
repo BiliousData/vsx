@@ -79,7 +79,7 @@ iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim
 iso/clucky/main.arc: iso/clucky/idle0.tim iso/clucky/idle1.tim iso/clucky/left.tim iso/clucky/down.tim iso/clucky/up.tim iso/clucky/right.tim
 
 # vrage
-iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim
+iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim

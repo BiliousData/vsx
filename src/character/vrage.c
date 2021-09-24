@@ -16,10 +16,11 @@ enum
 {
 	Vrage_ArcMain_Idle0,
 	Vrage_ArcMain_Idle1,
-	//Vrage_ArcMain_Left,
-	//Vrage_ArcMain_Down,
-	//Vrage_ArcMain_Up,
-	//Vrage_ArcMain_Right,
+	Vrage_ArcMain_Left,
+	Vrage_ArcMain_Down,
+	Vrage_ArcMain_Up,
+	Vrage_ArcMain_Right,
+	Vrage_ArcMain_RightB,
 	
 	Vrage_Arc_Max,
 };
@@ -40,21 +41,24 @@ typedef struct
 //v rage character definitions
 static const CharFrame char_vrage_frame[] = {
 	{Vrage_ArcMain_Idle0, {  0,   0, 136, 107}, { 42, 183+4}}, //0 idle 1
-	{Vrage_ArcMain_Idle0, {  0, 108, 108, 190}, { 43, 181+4}}, //1 idle 2
+	{Vrage_ArcMain_Idle0, {  0, 108, 136, 107}, { 43, 181+4}}, //1 idle 2
 	{Vrage_ArcMain_Idle1, {  0,   0, 137, 107}, { 42, 181+4}}, //2 idle 3
 	{Vrage_ArcMain_Idle1, {  0, 108, 137, 107}, { 41, 183+4}}, //3 idle 4
 	
-	//{Dad_ArcMain_Left, {  0,   0,  93, 195}, { 40, 185+4}}, //4 left 1
-	//{Dad_ArcMain_Left, { 94,   0,  95, 195}, { 40, 185+4}}, //5 left 2
+	{Vrage_ArcMain_Left, {  0,   0,  136, 106}, { 40, 185+4}}, //4 left 1
+	{Vrage_ArcMain_Left, {  0,   107,  136, 108}, { 40, 185+4}}, //5 left 2
 	
-	//{Dad_ArcMain_Down, {  0,   0, 118, 183}, { 43, 174+4}}, //6 down 1
-	//{Dad_ArcMain_Down, {119,   0, 117, 183}, { 43, 175+4}}, //7 down 2
+	{Vrage_ArcMain_Down, {  0,   0, 136, 98}, { 43, 174+4}}, //6 down 1
+	{Vrage_ArcMain_Down, {  0,   99, 136, 100}, { 43, 175+4}}, //7 down 2
 	
-	//{Dad_ArcMain_Up, {  0,   0, 102, 205}, { 40, 196+4}}, //8 up 1
-	//{Dad_ArcMain_Up, {103,   0, 103, 203}, { 40, 194+4}}, //9 up 2
+	{Vrage_ArcMain_Up, {  0,   0, 136, 105}, { 40, 196+4}}, //8 up 1
+	{Vrage_ArcMain_Up, {  0,   0, 136, 108}, { 40, 194+4}}, //9 up 2
 	
-	//{Dad_ArcMain_Right, {  0,   0, 117, 199}, { 43, 189+4}}, //10 right 1
-	//{Dad_ArcMain_Right, {118,   0, 114, 199}, { 42, 189+4}}, //11 right 2
+	{Vrage_ArcMain_Right, {  0,   0, 136, 98}, { 43, 189+4}}, //10 right 1
+	{Vrage_ArcMain_Right, {  0,   99, 136, 97}, { 42, 189+4}}, //11 right 2
+
+	{Vrage_ArcMain_RightB, { 0,   0, 137, 109}, { 43, 189+4}},
+	{Vrage_ArcMain_RightB, { 0,   110, 137, 109}, { 43, 189+4}},
 };
 
 static const Animation char_vrage_anim[CharAnim_Max] = {
