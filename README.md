@@ -1,10 +1,10 @@
-# PSXFunkin
-Friday Night Funkin' on the PSX LOL
+# /v/SX
+Vs /v/ on the PSX LOL
 
 ## Compilation
-Refer to [COMPILE.md](/COMPILE.md) here
+If you don't know how to compile this, read up on [COMPILE.md](/COMPILE.md).
 
 ## Disclaimer
-This project is not endorsed by the original Friday Night Funkin' devs, this is just an unofficial fan project because I was bored.
+Firstly, this is a modified version of PSXFunkin, by cuckydev.
 
-Assets such as Week 7, VS Kapi, VS Tricky are used with permission from their respective owners.
+Additionally, this port is NOT made by any of the original creators of the /v/ mod. If any of the original creators of either the /v/ mod or even PSXFunkin, please tell me, and I'll take this down right away.
