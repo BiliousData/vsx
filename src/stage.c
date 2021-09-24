@@ -344,8 +344,10 @@ static void Stage_NoteCheck(PlayerState *this, u8 type)
 				
 				if (stage.stage_id == StageId_Clwn_4)
 					this->health = -0x7000;
+				else if (stage.stage_id == StageId_V_2)
+				    this->health += 240;
 				else
-					this->health -= 2000;
+					this->health += 240;
 				if (this->character->spec & CHAR_SPEC_MISSANIM)
 					this->character->set_anim(this->character, note_anims[type & 0x3][1]);
 				else
