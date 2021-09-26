@@ -32,7 +32,8 @@ all: \
 	iso/week4/back.arc \
 	iso/week4/hench.arc \
 	iso/week5/back.arc \
-	iso/week7/back.arc
+	iso/week7/back.arc \
+	iso/vtown/back.arc \
 
 iso/%.tim: iso/%.png
 	tools/funkintimconv/funkintimconv $@ $<
@@ -79,7 +80,7 @@ iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim
 iso/clucky/main.arc: iso/clucky/idle0.tim iso/clucky/idle1.tim iso/clucky/left.tim iso/clucky/down.tim iso/clucky/up.tim iso/clucky/right.tim
 
 # vrage
-iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim
+iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim iso/vrage/fuck0.tim iso/vrage/fuck1.tim iso/vrage/fuck2.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim
@@ -99,3 +100,6 @@ iso/week5/back.arc: iso/week5/back0.tim iso/week5/back1.tim iso/week5/back2.tim 
 
 # Week 7
 iso/week7/back.arc: iso/week7/back0.tim iso/week7/back1.tim iso/week7/back2.tim iso/week7/back3.tim
+
+# /v/ stages
+iso/vtown/back.arc: iso/vtown/back0.tim

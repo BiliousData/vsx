@@ -204,6 +204,10 @@ void Char_BF_Tick(Character *character)
 					if ((stage.song_step & 0x1F) == 28)
 						character->set_anim(character, PlayerAnim_Peace);
 					break;
+				case StageId_V_1: //uhh Vidyagaems peace???
+				    if ((stage.song_step) == 188)
+					    character->set_anim(character, PlayerAnim_Peace);
+					break;
 				default:
 					break;
 			}

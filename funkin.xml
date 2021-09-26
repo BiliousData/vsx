@@ -185,7 +185,7 @@
 			<!-- Week /v/ assets -->
 			<dir name = "week8">
 			    <!-- Background art -->
-
+                <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
 
 				<!--Vidyagaems-->
 				<file name = "8.1e.cht" type = "data" source = "iso/chart/vidyagaems-easy.json.cht"/>

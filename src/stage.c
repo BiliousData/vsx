@@ -66,6 +66,7 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "stage/week4.h"
 #include "stage/week5.h"
 #include "stage/week7.h"
+#include "stage/vtown.h"
 
 static const StageDef stage_defs[StageId_Max] = {
 	#include "stagedef_disc1.h"
@@ -1080,6 +1081,8 @@ void Stage_Load(StageId id, StageDiff difficulty, boolean story)
 	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SAGE.TIM;1"), GFX_LOADTEX_FREE);
 	else if (id = StageId_V_4)
 	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SICK.TIM;1"), GFX_LOADTEX_FREE);
+	else if (id = StageId_Clwn_4)
+	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0.TIM;1"), GFX_LOADTEX_FREE);
 	else
 		Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0.TIM;1"), GFX_LOADTEX_FREE);
 	Gfx_LoadTex(&stage.tex_hud1, IO_Read("\\STAGE\\HUD1.TIM;1"), GFX_LOADTEX_FREE);

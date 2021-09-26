@@ -505,23 +505,23 @@
 	{ //StageId_V_1 (Vidyagaems)
 	    //Characters
 		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background
-		Back_Dummy_New,
+		Back_Vtown_New,
 
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(1,1),FIXED_DEC(13,10)},
 		8, 1,
 		XA_Vidyagaems, 0,
 
-		StageId_V_2, STAGE_LOAD_FLAG
+		StageId_V_2, STAGE_LOAD_FLAG | STAGE_LOAD_OPPONENT
 	},
 	{ //StageId_V_2 (Sage)
 	    //Characters
 		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background
@@ -537,7 +537,7 @@
 	{ //StageId_V_3 (Harmony)
 	    //Characters
 		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background

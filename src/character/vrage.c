@@ -21,6 +21,9 @@ enum
 	Vrage_ArcMain_Up,
 	Vrage_ArcMain_Right,
 	Vrage_ArcMain_RightB,
+	Vrage_ArcMain_Fuck0,
+	Vrage_ArcMain_Fuck1,
+	Vrage_ArcMain_Fuck2,
 	
 	Vrage_Arc_Max,
 };
@@ -56,9 +59,9 @@ static const CharFrame char_vrage_frame[] = {
 	
 	{Vrage_ArcMain_Right, {  0,   0, 136, 98}, { 43, 189+4}}, //10 right 1
 	{Vrage_ArcMain_Right, {  0,   99, 136, 97}, { 42, 189+4}}, //11 right 2
+	{Vrage_ArcMain_RightB, {  0,   0, 137, 109}, { 43, 189+4}}, //12 right alt 1
+	{Vrage_ArcMain_RightB, {  0,   110, 137, 109}, { 43, 189+4}}, //13 right alt 2
 
-	{Vrage_ArcMain_RightB, { 0,   0, 137, 109}, { 43, 189+4}},
-	{Vrage_ArcMain_RightB, { 0,   110, 137, 109}, { 43, 189+4}},
 };
 
 static const Animation char_vrage_anim[CharAnim_Max] = {
@@ -68,9 +71,9 @@ static const Animation char_vrage_anim[CharAnim_Max] = {
 	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_DownAlt
 	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up
-	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
+	{3, (const u8[]){14, 15, 16, 17, 18, 17, 18, 17,  ASCR_BACK, 1}},   //CharAnim_UpAlt
 	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
-	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_RightAlt
+	{2, (const u8[]){12, 13, ASCR_BACK, 1}},         //CharAnim_RightAlt
 };
 
 //v Rage character functions
@@ -95,10 +98,13 @@ void Char_Vrage_Tick(Character *character)
 	//Perform idle dance
 	if ((character->pad_held & (INPUT_LEFT | INPUT_DOWN | INPUT_UP | INPUT_RIGHT)) == 0)
 		Character_PerformIdle(character);
+
 	
 	//Animate and draw
 	Animatable_Animate(&character->animatable, (void*)this, Char_Vrage_SetFrame);
 	Character_Draw(character, &this->tex, &char_vrage_frame[this->frame]);
+
+
 }
 
 void Char_Vrage_SetAnim(Character *character, u8 anim)
@@ -154,6 +160,10 @@ Character *Char_Vrage_New(fixed_t x, fixed_t y)
 		"down.tim",  //Dad_ArcMain_Down
 		"up.tim",    //Dad_ArcMain_Up
 		"right.tim", //Dad_ArcMain_Right
+		"rightb.tim",//vrage_arcmain_rightb
+		"fuck0.tim",
+		"fuck1.tim",
+		"fuck2.tim",
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;
