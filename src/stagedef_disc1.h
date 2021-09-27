@@ -525,7 +525,7 @@
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background
-		Back_Dummy_New,
+		Back_Vtown_New,
 
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(1,1),FIXED_DEC(13,10)},
@@ -541,7 +541,7 @@
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background
-		Back_Dummy_New,
+		Back_Vtown_New,
 
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(1,1),FIXED_DEC(13,10)},
