@@ -66,6 +66,13 @@ typedef enum
 	StageId_7_2, //Guns
 	StageId_7_3, //Stress
 	
+	StageId_V_1, //Vidyagaems
+	StageId_V_2, //Sage
+	StageId_V_3, //Harmony
+	StageId_V_4, //Infinitrigger
+	StageId_V_5, //nogames
+	StageId_V_6, //Sneed
+	
 	StageId_Kapi_1, //Wocky
 	StageId_Kapi_2, //Beathoven
 	StageId_Kapi_3, //Hairball
@@ -76,19 +83,12 @@ typedef enum
 	StageId_Clwn_3, //Hellclown
 	StageId_Clwn_4, //Expurgation
 
-	StageId_V_1, //Vidyagaems
-	StageId_V_2, //Sage
-	StageId_V_3, //Harmony
-	StageId_V_4, //Infinitrigger
-	StageId_V_5, //nogames
-	StageId_V_6, //Sneed
-	
 	StageId_2_4, //Clucked
 	
 	StageId_Max
 } StageId;
 
-#define StageId_LastVanilla StageId_7_3
+#define StageId_LastVanilla StageId_V_6
 
 typedef enum
 {
