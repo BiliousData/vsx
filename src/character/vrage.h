@@ -7,7 +7,7 @@
 #ifndef _VRAGE_H
 #define _VRAGE_H
 
-#include "../character.h"
+#include "../vrageanim.h"
 
 //Dad character functions
 Character *Char_Vrage_New(fixed_t x, fixed_t y);
