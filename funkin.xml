@@ -284,6 +284,7 @@
 
 				<!-- /v/ assets -->
 				<file name = "vrage.arc" type = "data" source = "iso/vrage/main.arc"/>
+				<file name = "vcalm.arc" type = "data" source = "iso/vcalm/main.arc"/>
 			</dir>
 			
 			<!-- Music -->
