@@ -516,7 +516,7 @@
 		8, 1,
 		XA_Vidyagaems, 0,
 
-		StageId_V_2, STAGE_LOAD_FLAG | STAGE_LOAD_OPPONENT
+		StageId_V_2, STAGE_LOAD_FLAG
 	},
 	{ //StageId_V_2 (Sage)
 	    //Characters
@@ -532,12 +532,12 @@
 		8, 2,
 		XA_Sage, 2,
 
-		StageId_V_3, STAGE_LOAD_FLAG
+		StageId_V_3, STAGE_LOAD_FLAG | STAGE_LOAD_OPPONENT
 	},
 	{ //StageId_V_3 (Harmony)
 	    //Characters
 		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
+		{Char_Vcalm_New,  FIXED_DEC(-120,1),  FIXED_DEC(140,1)},
 		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 
 		//Stage background
