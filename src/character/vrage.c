@@ -62,6 +62,12 @@ static const CharFrame char_vrage_frame[] = {
 	{Vrage_ArcMain_RightB, {  0,   0, 137, 109}, { 43, 189+4}}, //12 right alt 1
 	{Vrage_ArcMain_RightB, {  0,   110, 137, 109}, { 43, 189+4}}, //13 right alt 2
 
+	{Vrage_ArcMain_Fuck0, {  0,  0, 136, 96}, { 40, 196+4}},
+	{Vrage_ArcMain_Fuck0, {  0,  97, 136, 99}, { 40, 196+4}},
+	{Vrage_ArcMain_Fuck1, {  0,  0, 136, 99}, { 40, 196+4}},
+	{Vrage_ArcMain_Fuck1, {  0,  100, 137, 100}, { 40, 196+4}},
+	{Vrage_ArcMain_Fuck2, {  0,  0, 137, 100}, { 40, 196+4}}
+
 };
 
 static const Animation char_vrage_anim[CharAnim_Max] = {
@@ -69,11 +75,14 @@ static const Animation char_vrage_anim[CharAnim_Max] = {
 	{2, (const u8[]){ 4,  5, ASCR_BACK, 1}},         //CharAnim_Left
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_LeftAlt
 	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down
-	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_DownAlt
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_DownAlt
 	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up
-	{3, (const u8[]){14, 15, 16, 17, 18, 17, 18, 17,  ASCR_BACK, 1}},   //CharAnim_UpAlt
+	{3, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
 	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
 	{2, (const u8[]){12, 13, ASCR_BACK, 1}},         //CharAnim_RightAlt
+
+	{3, (const u8[]){14, 15, 16, ASCR_CHGANI, CharAnim_Fuck2}},//FUCK
+	{1, (const u8[]){ 17, 18, ASCR_CHGANI, CharAnim_Fuck2}}, //FUCK2
 };
 
 //v Rage character functions
@@ -104,7 +113,21 @@ void Char_Vrage_Tick(Character *character)
 	Animatable_Animate(&character->animatable, (void*)this, Char_Vrage_SetFrame);
 	Character_Draw(character, &this->tex, &char_vrage_frame[this->frame]);
 
-
+	if (stage.flag & STAGE_FLAG_JUST_STEP)
+    {   //Stage specific animations
+		if (stage.note_scroll >= 0)
+		{
+			switch (stage.stage_id)
+			{
+				case StageId_V_2: //Sage fuck
+				    if ((stage.song_step) == 1664)
+					    character->set_anim(character, CharAnim_Fuck);
+					break;
+				default:
+					break;
+			}
+		}
+	}
 }
 
 void Char_Vrage_SetAnim(Character *character, u8 anim)
