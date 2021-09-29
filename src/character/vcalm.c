@@ -31,6 +31,8 @@ enum
 	Vcalm_ArcMain_DownMic,
 	Vcalm_ArcMain_UpMic,
 	Vcalm_ArcMain_RightMic,
+	Vcalm_ArcMain_IdleMic0,
+	Vcalm_ArcMain_IdleMic1,
 
 
 	Vcalm_Arc_Max,
@@ -93,20 +95,28 @@ static const CharFrame char_vcalm_frame[] = {
 	{Vcalm_ArcMain_UpMic, {0, 105, 136, 104,}, { 30, 147,}},  //33 rightmic2
 	//Don't ask
 	//I don't know why it had to be like this
+
+    {Vcalm_ArcMain_IdleMic0, {0, 0, 136, 105,}, { 30, 148,}},  //34 idlealt1
+	{Vcalm_ArcMain_IdleMic0, {0, 106, 136, 107,}, { 30, 150}}, //35 idlealt2
+	{Vcalm_ArcMain_IdleMic1, {0, 0, 136, 107,}, { 30, 150}},   //36 idlealt3
+	{Vcalm_ArcMain_IdleMic1, {0, 108, 136, 107,}, { 30, 150}}, //37 idlealt4
+
 };
 
 static const Animation char_vcalm_anim[CharAnim_Max] = {
 	{2, (const u8[]){ 0,  1,  2,  3,  ASCR_BACK, 0}}, //CharAnim_Idle
 	{2, (const u8[]){ 4,  5, ASCR_BACK, 1}},         //CharAnim_Left
-	{2, (const u8[]){ 26, 27, ASCR_BACK, 1}},         //CharAnim_LeftAlt = up???
+	{2, (const u8[]){ 26, 27, 27, ASCR_CHGANI, CharAnim_IdleAlt}},         //CharAnim_LeftAlt = up???
 	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down 
-	{2, (const u8[]){ 29, 30, ASCR_BACK, 1}},         //CharAnim_DownAlt = left???
+	{2, (const u8[]){ 29, 30, 30, ASCR_CHGANI, CharAnim_IdleAlt}},         //CharAnim_DownAlt = left???
 	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up 
-	{2, (const u8[]){ 30, 31, ASCR_BACK, 1}},        //CharAnim_UpAlt = right???
+	{2, (const u8[]){ 30, 31, 31, ASCR_CHGANI, CharAnim_IdleAlt}},        //CharAnim_UpAlt = right???
 	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
-	{2, (const u8[]){32, 33, ASCR_BACK, 1}},         //CharAnim_RightAlt = down???
+	{2, (const u8[]){32, 33, 33, ASCR_CHGANI, CharAnim_IdleAlt}},         //CharAnim_RightAlt = down???
 
-	{3, (const u8[]){ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, ASCR_BACK, 1}},   //CharAnim_PadBreak
+	{3, (const u8[]){ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, ASCR_CHGANI, CharAnim_IdleAlt}},   //CharAnim_PadBreak
+
+	{2, (const u8[]){ 34, 35, 36, 37, 37, 37, 37,  ASCR_CHGANI, CharAnim_IdleAlt}},
 };
 
 //v Rage character functions
@@ -130,7 +140,8 @@ void Char_Vcalm_Tick(Character *character)
 	
 	//Perform idle dance
 	if ((character->pad_held & (INPUT_LEFT | INPUT_DOWN | INPUT_UP | INPUT_RIGHT)) == 0)
-		Character_PerformIdle(character);
+	    Character_PerformIdle(character);
+
 
 	
 	//Animate and draw
@@ -218,6 +229,8 @@ Character *Char_Vcalm_New(fixed_t x, fixed_t y)
 		"leftmic.tim",
 		"rightmic.tim",
 		"downmic.tim",
+		"idlemic0.tim",
+		"idlemic1.tim",
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;

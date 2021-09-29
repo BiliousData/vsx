@@ -84,7 +84,7 @@ iso/clucky/main.arc: iso/clucky/idle0.tim iso/clucky/idle1.tim iso/clucky/left.t
 iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim iso/vrage/fuck0.tim iso/vrage/fuck1.tim iso/vrage/fuck2.tim
 
 # vcalm
-iso/vcalm/main.arc: iso/vcalm/idle0.tim iso/vcalm/idle1.tim iso/vcalm/left.tim iso/vcalm/right.tim iso/vcalm/up.tim iso/vcalm/down.tim iso/vcalm/break0.tim iso/vcalm/break1.tim iso/vcalm/break2.tim iso/vcalm/break3.tim iso/vcalm/break4.tim iso/vcalm/break5.tim iso/vcalm/break6.tim iso/vcalm/upmic.tim iso/vcalm/leftmic.tim iso/vcalm/rightmic.tim iso/vcalm/downmic.tim
+iso/vcalm/main.arc: iso/vcalm/idle0.tim iso/vcalm/idle1.tim iso/vcalm/left.tim iso/vcalm/right.tim iso/vcalm/up.tim iso/vcalm/down.tim iso/vcalm/break0.tim iso/vcalm/break1.tim iso/vcalm/break2.tim iso/vcalm/break3.tim iso/vcalm/break4.tim iso/vcalm/break5.tim iso/vcalm/break6.tim iso/vcalm/upmic.tim iso/vcalm/leftmic.tim iso/vcalm/rightmic.tim iso/vcalm/downmic.tim iso/vcalm/idlemic0.tim iso/vcalm/idlemic1.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim
