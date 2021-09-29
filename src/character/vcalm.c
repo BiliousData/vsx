@@ -27,6 +27,10 @@ enum
     Vcalm_ArcMain_Break4,	
     Vcalm_ArcMain_Break5,
 	Vcalm_ArcMain_Break6,
+	Vcalm_ArcMain_LeftMic,
+	Vcalm_ArcMain_DownMic,
+	Vcalm_ArcMain_UpMic,
+	Vcalm_ArcMain_RightMic,
 
 
 	Vcalm_Arc_Max,
@@ -78,20 +82,27 @@ static const CharFrame char_vcalm_frame[] = {
 	{Vcalm_ArcMain_Break5, {  0,  106, 136, 102,}, { 30, 145,}},          //23 PadBreak11
 	{Vcalm_ArcMain_Break6, {  0,  0, 136, 106,}, { 30, 149,}},          //24 PadBreak12
 	{Vcalm_ArcMain_Break6, {  0,  107, 136, 106,}, { 30, 149,}},          //25 PadBreak13
-	{Vcalm_ArcMain_Left, {  0,   0,  136, 104}, { 30, 147}}, //26 PadBreak0 cuz i stupid
-	{Vcalm_ArcMain_Left, {  0,   105,  136, 105}, { 30, 148}}, //27 PadBreak0 cuz i stupid
+
+	{Vcalm_ArcMain_DownMic, {0, 0, 136, 106,}, { 30, 149,}},     //26 leftalt1
+	{Vcalm_ArcMain_DownMic, {0, 107, 136, 105,}, { 30, 148,}},   //27 leftalt2
+	{Vcalm_ArcMain_RightMic, {0, 0, 136, 105,}, { 30, 148,}},     //28 downalt1
+	{Vcalm_ArcMain_RightMic, {0, 106, 136, 105,}, { 30, 148,}},   //29 downalt2
+	{Vcalm_ArcMain_LeftMic, {0, 0, 136, 109,}, { 30, 152,}},       //30 upmic1
+	{Vcalm_ArcMain_LeftMic, {0, 110, 136, 108,}, { 30, 151,}},     //31 upmic2
+	{Vcalm_ArcMain_UpMic, {0, 0, 136, 104,}, { 30, 147,}},    //32 rightmic1
+	{Vcalm_ArcMain_UpMic, {0, 105, 136, 104,}, { 30, 147,}},  //33 rightmic2
 };
 
 static const Animation char_vcalm_anim[CharAnim_Max] = {
 	{2, (const u8[]){ 0,  1,  2,  3,  ASCR_BACK, 0}}, //CharAnim_Idle
 	{2, (const u8[]){ 4,  5, ASCR_BACK, 1}},         //CharAnim_Left
-	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_LeftAlt
-	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down
-	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_DownAlt
-	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up
-	{3, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
+	{2, (const u8[]){ 26, 27, ASCR_BACK, 1}},         //CharAnim_LeftAlt = up???
+	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down 
+	{2, (const u8[]){ 29, 30, ASCR_BACK, 1}},         //CharAnim_DownAlt = left???
+	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up 
+	{2, (const u8[]){ 30, 31, ASCR_BACK, 1}},        //CharAnim_UpAlt = right???
 	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
-	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_RightAlt
+	{2, (const u8[]){32, 33, ASCR_BACK, 1}},         //CharAnim_RightAlt = down???
 
 	{3, (const u8[]){ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, ASCR_BACK, 1}},   //CharAnim_PadBreak
 };
@@ -201,6 +212,10 @@ Character *Char_Vcalm_New(fixed_t x, fixed_t y)
 		"break4.tim",
 		"break5.tim",
 		"break6.tim",
+		"upmic.tim",
+		"leftmic.tim",
+		"rightmic.tim",
+		"downmic.tim",
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;
