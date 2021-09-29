@@ -91,6 +91,8 @@ static const CharFrame char_vcalm_frame[] = {
 	{Vcalm_ArcMain_LeftMic, {0, 110, 136, 108,}, { 30, 151,}},     //31 upmic2
 	{Vcalm_ArcMain_UpMic, {0, 0, 136, 104,}, { 30, 147,}},    //32 rightmic1
 	{Vcalm_ArcMain_UpMic, {0, 105, 136, 104,}, { 30, 147,}},  //33 rightmic2
+	//Don't ask
+	//I don't know why it had to be like this
 };
 
 static const Animation char_vcalm_anim[CharAnim_Max] = {
