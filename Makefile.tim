@@ -110,4 +110,4 @@ iso/week5/back.arc: iso/week5/back0.tim iso/week5/back1.tim iso/week5/back2.tim 
 iso/week7/back.arc: iso/week7/back0.tim iso/week7/back1.tim iso/week7/back2.tim iso/week7/back3.tim
 
 # /v/ stages
-iso/vtown/back.arc: iso/vtown/back0.tim
+iso/vtown/back.arc: iso/vtown/back0.tim iso/vtown/back1.tim
