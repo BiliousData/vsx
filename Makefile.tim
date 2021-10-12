@@ -24,9 +24,10 @@ all: \
 	iso/tank/good.arc \
 	iso/gf/main.arc \
 	iso/gf/speaker.tim \
-	iso/clucky/main.arc \
+	iso/bfv/main.arc \
 	iso/vrage/main.arc \
 	iso/vcalm/main.arc \
+	iso/cancer/main.arc \
 	iso/week1/back.arc \
 	iso/week2/back.arc \
 	iso/week3/back.arc \
@@ -77,14 +78,17 @@ iso/tank/good.arc: iso/tank/good0.tim iso/tank/good1.tim iso/tank/good2.tim iso/
 # GF
 iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim
 
-# Clucky
-iso/clucky/main.arc: iso/clucky/idle0.tim iso/clucky/idle1.tim iso/clucky/left.tim iso/clucky/down.tim iso/clucky/up.tim iso/clucky/right.tim
+# bfv
+iso/bfv/main.arc: iso/bfv/hit.tim iso/bfv/miss.tim
 
 # vrage
 iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim iso/vrage/fuck0.tim iso/vrage/fuck1.tim iso/vrage/fuck2.tim
 
 # vcalm
 iso/vcalm/main.arc: iso/vcalm/idle0.tim iso/vcalm/idle1.tim iso/vcalm/left.tim iso/vcalm/right.tim iso/vcalm/up.tim iso/vcalm/down.tim iso/vcalm/break0.tim iso/vcalm/break1.tim iso/vcalm/break2.tim iso/vcalm/break3.tim iso/vcalm/break4.tim iso/vcalm/break5.tim iso/vcalm/break6.tim iso/vcalm/upmic.tim iso/vcalm/leftmic.tim iso/vcalm/rightmic.tim iso/vcalm/downmic.tim iso/vcalm/idlemic0.tim iso/vcalm/idlemic1.tim
+
+# Cancer Lord
+iso/cancer/main.arc: iso/cancer/idle0.tim iso/cancer/idle1.tim iso/cancer/left.tim iso/cancer/right0.tim iso/cancer/right1.tim iso/cancer/up0.tim iso/cancer/up1.tim iso/cancer/down.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim

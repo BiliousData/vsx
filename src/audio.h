@@ -25,8 +25,6 @@ typedef enum
 	XA_Week5B, //WEEK5B.XA
 	XA_Week6A, //WEEK6A.XA
 	XA_Week6B, //WEEK6B.XA
-	XA_Week7A, //WEEK7A.XA
-	XA_Week7B, //WEEK7B.XA
 	XA_KapiA,  //KAPIA.XA
 	XA_KapiB,  //KAPIB.XA
 	XA_ClwnA,  //CLWNA.XA
@@ -76,11 +74,6 @@ typedef enum
 	XA_Roses,  //Roses
 	//WEEK6B.XA
 	XA_Thorns, //Thorns
-	//WEEK7A.XA
-	XA_Ugh,  //Ugh
-	XA_Guns, //Guns
-	//WEEK7B.XA
-	XA_Stress, //Stress
 	//KAPIA.XA
 	XA_Wocky,     //Wocky
 	XA_Beathoven, //Beathoven

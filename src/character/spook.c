@@ -17,10 +17,6 @@ enum
 	Spook_ArcMain_Idle0,
 	Spook_ArcMain_Idle1,
 	Spook_ArcMain_Idle2,
-	Spook_ArcMain_Left,
-	Spook_ArcMain_Down,
-	Spook_ArcMain_Up,
-	Spook_ArcMain_Right,
 	
 	Spook_Arc_Max,
 };
@@ -46,29 +42,17 @@ static const CharFrame char_spook_frame[] = {
 	{Spook_ArcMain_Idle1, { 91,   0,  89, 124}, { 56, 120}}, //3 idle 4
 	{Spook_ArcMain_Idle2, {  0,   0, 124, 133}, { 76, 127}}, //4 idle 5
 	{Spook_ArcMain_Idle2, {125,   0, 121, 131}, { 74, 127}}, //5 idle 6
-	
-	{Spook_ArcMain_Left, {  0,   0, 140, 134}, {103, 130}}, //6 left 1
-	{Spook_ArcMain_Left, {115, 123, 140, 132}, {100, 128}}, //7 left 2
-	
-	{Spook_ArcMain_Down, {  0,   0, 117, 102}, { 66,  99}}, //8 down 1
-	{Spook_ArcMain_Down, {118,   0, 113, 101}, { 65,  98}}, //9 down 2
-	
-	{Spook_ArcMain_Up, {  0,   0, 101, 143}, { 70, 139}}, //10 up 1
-	{Spook_ArcMain_Up, {102,   0, 102, 142}, { 69, 138}}, //11 up 2
-	
-	{Spook_ArcMain_Right, {  0,   0, 111, 130}, { 42, 128}}, //12 right 1
-	{Spook_ArcMain_Right, {112,   0, 110, 133}, { 39, 131}}, //13 right 2
 };
 
 static const Animation char_spook_anim[CharAnim_Max] = {
 	{2, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}}, //CharAnim_Idle
-	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},          //CharAnim_Left
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}},          //CharAnim_Left
 	{2, (const u8[]){ 0,  1,  2,  3, ASCR_BACK, 1}},  //CharAnim_LeftAlt
-	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},          //CharAnim_Down
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}},          //CharAnim_Down
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}}, //CharAnim_DownAlt
-	{2, (const u8[]){10, 11, ASCR_BACK, 1}},          //CharAnim_Up
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}},          //CharAnim_Up
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}}, //CharAnim_UpAlt
-	{2, (const u8[]){12, 13, ASCR_BACK, 1}},          //CharAnim_Right
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_LeftAlt}},          //CharAnim_Right
 	{2, (const u8[]){ 4,  5,  2,  3, ASCR_BACK, 1}},  //CharAnim_RightAlt
 };
 
@@ -173,10 +157,6 @@ Character *Char_Spook_New(fixed_t x, fixed_t y)
 		"idle0.tim", //Spook_ArcMain_Idle0
 		"idle1.tim", //Spook_ArcMain_Idle1
 		"idle2.tim", //Spook_ArcMain_Idle2
-		"left.tim",  //Spook_ArcMain_Left
-		"down.tim",  //Spook_ArcMain_Down
-		"up.tim",    //Spook_ArcMain_Up
-		"right.tim", //Spook_ArcMain_Right
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;

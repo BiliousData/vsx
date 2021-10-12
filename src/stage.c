@@ -56,9 +56,10 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "character/senpaim.h"
 #include "character/tank.h"
 #include "character/gf.h"
-#include "character/clucky.h"
+#include "character/bfv.h"
 #include "character/vrage.h"
 #include "character/vcalm.h"
+#include "character/cancer.h"
 
 #include "stage/dummy.h"
 #include "stage/week1.h"
@@ -344,10 +345,8 @@ static void Stage_NoteCheck(PlayerState *this, u8 type)
 				//Hit the mine
 				note->type |= NOTE_FLAG_HIT;
 				
-				if (stage.stage_id == StageId_Clwn_4)
-					this->health = -0x7000;
-				else if (stage.stage_id == StageId_V_2)
-				    this->health += 240;
+				if (stage.stage_id == StageId_1_4)
+					this->health -= 2000;
 				else
 					this->health += 240;
 				if (this->character->spec & CHAR_SPEC_MISSANIM)
@@ -1076,16 +1075,10 @@ void Stage_Load(StageId id, StageDiff difficulty, boolean story)
 	stage.story = story;
 	
 	//Load HUD textures
-	if (id >= StageId_6_1 && id <= StageId_6_3)
-		Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0WEEB.TIM;1"), GFX_LOADTEX_FREE);
-	else if (id = StageId_V_2)
-	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SAGE.TIM;1"), GFX_LOADTEX_FREE);
-	else if (id = StageId_V_4)
-	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SICK.TIM;1"), GFX_LOADTEX_FREE);
-	else if (id = StageId_Clwn_4)
-	    Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0.TIM;1"), GFX_LOADTEX_FREE);
+	if (stage.stage_id == StageId_1_4)
+		Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SICK.TIM;1"), GFX_LOADTEX_FREE);
 	else
-		Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0.TIM;1"), GFX_LOADTEX_FREE);
+		Gfx_LoadTex(&stage.tex_hud0, IO_Read("\\STAGE\\HUD0SAGE.TIM;1"), GFX_LOADTEX_FREE);
 	Gfx_LoadTex(&stage.tex_hud1, IO_Read("\\STAGE\\HUD1.TIM;1"), GFX_LOADTEX_FREE);
 	
 	//Load stage background

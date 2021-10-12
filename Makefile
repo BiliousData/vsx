@@ -40,9 +40,10 @@ SRCS = src/main.c \
        src/character/senpaim.c \
        src/character/tank.c \
        src/character/gf.c \
-       src/character/clucky.c \
+       src/character/bfv.c \
        src/character/vrage.c \
        src/character/vcalm.c \
+       src/character/cancer.c \
        src/object.c \
        src/object/combo.c \
        src/object/splash.c \

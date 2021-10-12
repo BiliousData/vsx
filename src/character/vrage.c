@@ -119,7 +119,7 @@ void Char_Vrage_Tick(Character *character)
 		{
 			switch (stage.stage_id)
 			{
-				case StageId_V_2: //Sage fuck
+				case StageId_1_2: //Sage fuck
 				    if ((stage.song_step) == 1664)
 					    character->set_anim(character, CharAnim_Fuck);
 					break;

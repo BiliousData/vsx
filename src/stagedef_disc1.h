@@ -1,64 +1,61 @@
-	{ //StageId_1_1 (Bopeebo)
+	{ //StageId_1_1 (Vidyagaems)
 		//Characters
-		{Char_BF_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Dad_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
-		
-		//Stage background
-		Back_Week1_New,
-		
-		//Song info
-		{FIXED_DEC(1,1),FIXED_DEC(1,1),FIXED_DEC(13,10)},
-		1, 1,
-		XA_Bopeebo, 0,
-		
-		StageId_1_2, STAGE_LOAD_FLAG
+		{Char_BFV_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
+        {Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
+        {Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
+        //Stage background
+        Back_Vtown_New,
+        //Song info
+        {FIXED_DEC(19,10),FIXED_DEC(23,10),FIXED_DEC(25,10)},
+        8, 1,
+        XA_Vidyagaems, 0,
+        StageId_1_2, STAGE_LOAD_FLAG
 	},
-	{ //StageId_1_2 (Fresh)
+	{ //StageId_1_2 (Sage)
 		//Characters
-		{Char_BF_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Dad_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_BFV_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
+		{Char_Vrage_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
 		{Char_GF_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
-		Back_Week1_New,
+		Back_Vtown_New,
 		
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(13,10),FIXED_DEC(18,10)},
 		1, 2,
-		XA_Fresh, 2,
+		XA_Sage, 2,
 		
-		StageId_1_3, STAGE_LOAD_FLAG
+		StageId_1_3, STAGE_LOAD_FLAG | STAGE_LOAD_OPPONENT
 	},
-	{ //StageId_1_3 (Dadbattle)
+	{ //StageId_1_3 (Harmony)
 		//Characters
-		{Char_BF_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Dad_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_BFV_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
+		{Char_Vcalm_New,  FIXED_DEC(-120,1),  FIXED_DEC(140,1)},
 		{Char_GF_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
-		Back_Week1_New,
+		Back_Vtown_New,
 		
 		//Song info
 		{FIXED_DEC(13,10),FIXED_DEC(15,10),FIXED_DEC(23,10)},
 		1, 3,
-		XA_Dadbattle, 0,
+		XA_Harmony, 0,
 		
 		StageId_1_3, 0
 	},
-	{ //StageId_1_4 (Tutorial)
+	{ //StageId_1_4 (Infinitrigger)
 		//Characters
-		{Char_BF_New,   FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Dad_New,   FIXED_DEC(0,1),  FIXED_DEC(-15,1)}, //TODO
-		{Char_GF_New,    FIXED_DEC(0,1),    FIXED_DEC(0,1)},
+		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
+        {Char_Cancer_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+        {Char_GF_New,        FIXED_DEC(500,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
-		Back_Week1_New,
+		Back_Dummy_New,
 		
 		//Song info
-		{FIXED_DEC(1,1),FIXED_DEC(1,1),FIXED_DEC(1,1)},
+		{FIXED_DEC(29,10),FIXED_DEC(29,10),FIXED_DEC(29,10)},
 		1, 4,
-		XA_Tutorial, 2,
+		XA_Infinitrigger, 2,
 		
 		StageId_1_4, 0
 	},
@@ -70,14 +67,14 @@
 		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
-		Back_Week2_New,
+		Back_Dummy_New,
 		
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(17,10),FIXED_DEC(24,10)},
 		2, 1,
-		XA_Spookeez, 0,
+		XA_Nogames, 0,
 		
-		StageId_2_2, STAGE_LOAD_FLAG
+		StageId_2_1, 0,
 	},
 	{ //StageId_2_2 (South)
 		//Characters
@@ -86,14 +83,14 @@
 		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
-		Back_Week2_New,
+		Back_Dummy_New,
 		
 		//Song info
 		{FIXED_DEC(11,10),FIXED_DEC(15,10),FIXED_DEC(22,10)},
 		2, 2,
-		XA_South, 2,
+		XA_Sneed, 2,
 		
-		StageId_2_3, STAGE_LOAD_FLAG | STAGE_LOAD_OPPONENT
+		StageId_2_2, 0,
 	},
 	{ //StageId_2_3 (Monster)
 		//Characters
@@ -324,54 +321,7 @@
 		StageId_6_3, 0
 	},
 	
-	{ //StageId_7_1 (Ugh)
-		//Characters
-		{Char_BF_New,    FIXED_DEC(105,1),  FIXED_DEC(100,1)},
-		{Char_Tank_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,      FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
-		
-		//Stage background
-		Back_Week7_New,
-		
-		//Song info
-		{FIXED_DEC(125,100),FIXED_DEC(18,10),FIXED_DEC(23,10)},
-		7, 1,
-		XA_Ugh, 0,
-		
-		StageId_7_2, STAGE_LOAD_FLAG
-	},
-	{ //StageId_7_2 (Guns)
-		//Characters
-		{Char_BF_New,    FIXED_DEC(105,1),  FIXED_DEC(100,1)},
-		{Char_Tank_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,      FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
-		
-		//Stage background
-		Back_Week7_New,
-		
-		//Song info
-		{FIXED_DEC(14,10),FIXED_DEC(2,1),FIXED_DEC(25,10)},
-		7, 2,
-		XA_Guns, 2,
-		
-		StageId_7_3, STAGE_LOAD_FLAG | STAGE_LOAD_PLAYER | STAGE_LOAD_OPPONENT | STAGE_LOAD_GIRLFRIEND
-	},
-	{ //StageId_7_3 (Stress)
-		//Characters
-		{Char_BF_New,    FIXED_DEC(105,1),  FIXED_DEC(100,1)}, //TODO: carry gf
-		{Char_Tank_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,      FIXED_DEC(0,1),  FIXED_DEC(-15,1)}, //TODO: pico funny
-		
-		//Stage background
-		Back_Week7_New,
-		
-		//Song info
-		{FIXED_DEC(175,100),FIXED_DEC(22,10),FIXED_DEC(26,10)},
-		7, 3,
-		XA_Stress, 0,
-		
-		StageId_7_3, 0
-	},
+
 	
 	{ //StageId_Kapi_1 (Wocky)
 		//Characters
@@ -554,8 +504,8 @@
 	{ //StageId_V_4 (Infinitrigger)
 	    //Characters
 		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Dad_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GF_New,        FIXED_DEC(0,1),    FIXED_DEC(0,1)},
+		{Char_Cancer_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_GF_New,        FIXED_DEC(500,1),    FIXED_DEC(0,1)},
 
 		//Stage background
 		Back_Dummy_New,

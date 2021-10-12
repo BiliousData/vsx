@@ -4,12 +4,12 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef _CLUCKY_H
-#define _CLUCKY_H
+#ifndef _BFV_H
+#define _BFV_H
 
-#include "../character.h"
+#include "../player.h"
 
-//Clucky character functions
-Character *Char_Clucky_New(fixed_t x, fixed_t y);
+//Boyfriend player functions
+Character *Char_BFV_New(fixed_t x, fixed_t y);
 
 #endif

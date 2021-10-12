@@ -154,7 +154,7 @@ void Char_Vcalm_Tick(Character *character)
 		{
 			switch (stage.stage_id)
 			{
-				case StageId_V_3: //Harmony dance pad malfunction
+				case StageId_1_3: //Harmony dance pad malfunction
 				if ((stage.song_step) == 485)
 					    character->set_anim(character, CharAnim_PadBreak);
 					break;

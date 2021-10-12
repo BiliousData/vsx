@@ -574,14 +574,7 @@ void Menu_Tick(void)
 				const char *name;
 				const char *tracks[3];
 			} menu_options[] = {
-				{NULL, StageId_1_4, "TUTORIAL", {"TUTORIAL", NULL, NULL}},
-				{"1", StageId_1_1, "DADDY DEAREST", {"BOPEEBO", "FRESH", "DADBATTLE"}},
-				{"2", StageId_2_1, "SPOOKY MONTH", {"SPOOKEEZ", "SOUTH", "MONSTER"}},
-				{"3", StageId_3_1, "PICO", {"PICO", "PHILLY NICE", "BLAMMED"}},
-				{"4", StageId_4_1, "MOMMY MUST MURDER", {"SATIN PANTIES", "HIGH", "MILF"}},
-				{"5", StageId_5_1, "RED SNOW", {"COCOA", "EGGNOG", "WINTER HORRORLAND"}},
-				{"6", StageId_6_1, "HATING SIMULATOR", {"SENPAI", "ROSES", "THORNS"}},
-				{"7", StageId_V_1, "A LITTLE TROLLING", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
+				{"1", StageId_V_1, "A LITTLE TROLLING", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
 			};
 			
 			//Initialize page
@@ -704,34 +697,10 @@ void Menu_Tick(void)
 				const char *text;
 			} menu_options[] = {
 				//{StageId_4_4, "TEST"},
-				{StageId_1_4, "TUTORIAL"},
-				{StageId_1_1, "BOPEEBO"},
-				{StageId_1_2, "FRESH"},
-				{StageId_1_3, "DADBATTLE"},
-				{StageId_2_1, "SPOOKEEZ"},
-				{StageId_2_2, "SOUTH"},
-				{StageId_2_3, "MONSTER"},
-				{StageId_3_1, "PICO"},
-				{StageId_3_2, "PHILLY NICE"},
-				{StageId_3_3, "BLAMMED"},
-				{StageId_4_1, "SATIN PANTIES"},
-				{StageId_4_2, "HIGH"},
-				{StageId_4_3, "MILF"},
-				{StageId_5_1, "COCOA"},
-				{StageId_5_2, "EGGNOG"},
-				{StageId_5_3, "WINTER HORRORLAND"},
-				{StageId_6_1, "SENPAI"},
-				{StageId_6_2, "ROSES"},
-				{StageId_6_3, "THORNS"},
-				{StageId_7_1, "UGH"},
-				{StageId_7_2, "GUNS"},
-				{StageId_7_3, "STRESS"},
-				{StageId_V_1, "VIDYAGAEMS"},
-				{StageId_V_2, "SAGE"},
-				{StageId_V_3, "HARMONY"},
-				{StageId_V_4, "INFINITRIGGER"},
-				{StageId_V_5, "NOGAMES"},
-				{StageId_V_6, "SNEED"},
+				{StageId_1_1, "VIDYAGAEMS"},
+				{StageId_1_2, "SAGE"},
+				{StageId_1_3, "HARMONY"},
+				{StageId_1_4, "INFINITRIGGER"},
 			};
 			
 			//Initialize page

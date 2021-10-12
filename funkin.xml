@@ -42,28 +42,27 @@
 				<file name = "hud0sick.tim" type = "data" source = "iso/stage/hud0cancer.tim"/>
 			</dir>
 			
-			<!-- Week 1 assets -->
-			<dir name = "week1">
-				<!-- Background art -->
-				<file name = "back.arc" type = "data" source = "iso/week1/back.arc"/>
-				
-				<!-- Bopeebo charts -->
-				<file name = "1.1e.cht" type = "data" source = "iso/chart/bopeebo-easy.json.cht"/>
-				<file name = "1.1n.cht" type = "data" source = "iso/chart/bopeebo.json.cht"/>
-				<file name = "1.1h.cht" type = "data" source = "iso/chart/bopeebo-hard.json.cht"/>
-				<!-- Fresh charts -->
-				<file name = "1.2e.cht" type = "data" source = "iso/chart/fresh-easy.json.cht"/>
-				<file name = "1.2n.cht" type = "data" source = "iso/chart/fresh.json.cht"/>
-				<file name = "1.2h.cht" type = "data" source = "iso/chart/fresh-hard.json.cht"/>
-				<!-- Dadbattle charts -->
-				<file name = "1.3e.cht" type = "data" source = "iso/chart/dadbattle-easy.json.cht"/>
-				<file name = "1.3n.cht" type = "data" source = "iso/chart/dadbattle.json.cht"/>
-				<file name = "1.3h.cht" type = "data" source = "iso/chart/dadbattle-hard.json.cht"/>
-				<!-- Tutorial charts -->
-				<file name = "1.4e.cht" type = "data" source = "iso/chart/tutorial-easy.json.cht"/>
-				<file name = "1.4n.cht" type = "data" source = "iso/chart/tutorial.json.cht"/>
-				<file name = "1.4h.cht" type = "data" source = "iso/chart/tutorial-hard.json.cht"/>
-			</dir>
+			<!-- Week /v/ assets -->
+            <dir name = "week1">
+                <!-- Background art -->
+                <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
+        	    <!--Vidyagaems-->
+        	    <file name = "1.1e.cht" type = "data" source = "iso/chart/vidyagaems-easy.json.cht"/>
+        	    <file name = "1.1n.cht" type = "data" source = "iso/chart/vidyagaems.json.cht"/>
+        	    <file name = "1.1h.cht" type = "data" source = "iso/chart/vidyagaems-hard.json.cht"/>
+        	    <!--Sage-->
+        	    <file name = "1.2e.cht" type = "data" source = "iso/chart/sage-easy.json.cht"/>
+        	    <file name = "1.2n.cht" type = "data" source = "iso/chart/sage.json.cht"/>
+        	    <file name = "1.2h.cht" type = "data" source = "iso/chart/sage-hard.json.cht"/>
+        	    <!--Harmony-->
+        	    <file name = "1.3e.cht" type = "data" source = "iso/chart/harmony-easy.json.cht"/>
+        	    <file name = "1.3n.cht" type = "data" source = "iso/chart/harmony.json.cht"/>
+        	    <file name = "1.3h.cht" type = "data" source = "iso/chart/harmony-hard.json.cht"/>
+        	    <!--Infinitrigger-->
+        	    <file name = "1.4e.cht" type = "data" source = "iso/chart/infinitrigger-easy.json.cht"/>
+        	    <file name = "1.4n.cht" type = "data" source = "iso/chart/infinitrigger.json.cht"/>
+        	    <file name = "1.4h.cht" type = "data" source = "iso/chart/infinitrigger-hard.json.cht"/>
+            </dir>
 			
 			<!-- Week 2 assets -->
 			<dir name = "week2">
@@ -249,6 +248,7 @@
 				<file name = "bf.arc" type = "data" source = "iso/bf/main.arc"/>
 				<file name = "bfdead.arc" type = "data" source = "iso/bf/dead.arc"/>
 				<file name = "bfweeb.arc" type = "data" source = "iso/bf/weeb.arc"/>
+				<file name = "bfv.arc" type = "data" source = "iso/bfv/main.arc"/>
 				
 				<!-- Dad assets -->
 				<file name = "dad.arc" type = "data" source = "iso/dad/main.arc"/>
@@ -278,13 +278,13 @@
 				<!-- Girlfriend assets -->
 				<file name = "gf.arc" type = "data" source = "iso/gf/main.arc"/>
 				<file name = "speaker.tim" type = "data" source = "iso/gf/speaker.tim"/>
-				
-				<!-- Clucky assets -->
-				<file name = "clucky.arc" type = "data" source = "iso/clucky/main.arc"/>
 
 				<!-- /v/ assets -->
 				<file name = "vrage.arc" type = "data" source = "iso/vrage/main.arc"/>
 				<file name = "vcalm.arc" type = "data" source = "iso/vcalm/main.arc"/>
+
+				<!-- Cancer Lord assets -->
+				<file name = "cancer.arc" type = "data" source = "iso/cancer/main.arc"/>
 			</dir>
 			
 			<!-- Music -->

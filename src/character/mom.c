@@ -17,11 +17,7 @@ enum
 {
 	Mom_ArcMain_Idle0,
 	Mom_ArcMain_Idle1,
-	Mom_ArcMain_Left,
-	Mom_ArcMain_Down,
-	Mom_ArcMain_Up,
-	Mom_ArcMain_Right,
-	
+
 	Mom_Arc_Max,
 };
 
@@ -47,29 +43,17 @@ static const CharFrame char_mom_frame[] = {
 	{Mom_ArcMain_Idle0, {128,   0, 128, 256}, { 41, 164}}, //1 idle 2
 	{Mom_ArcMain_Idle1, {  0,   0, 128, 256}, { 41, 165}}, //2 idle 3
 	{Mom_ArcMain_Idle1, {128,   0, 128, 256}, { 41, 165}}, //3 idle 4
-	
-	{Mom_ArcMain_Left, {  0,   0, 128, 256}, { 65, 151}}, //4 left 1
-	{Mom_ArcMain_Left, {128,   0, 128, 256}, { 63, 152}}, //5 left 1
-	
-	{Mom_ArcMain_Down, {  0,   0, 128, 128}, { 41, 111}}, //6 down 1
-	{Mom_ArcMain_Down, {128,   0, 128, 128}, { 42, 114}}, //7 down 2
-	
-	{Mom_ArcMain_Up, {  0,   0, 128, 256}, { 34, 196}}, //8 up 1
-	{Mom_ArcMain_Up, {128,   0, 128, 256}, { 35, 193}}, //9 up 2
-	
-	{Mom_ArcMain_Right, {  0,   0, 128, 256}, { 62, 150}}, //10 right 1
-	{Mom_ArcMain_Right, {128,   0, 128, 256}, { 61, 151}}, //11 right 2
 };
 
 static const Animation char_mom_anim[CharAnim_Max] = {
 	{2, (const u8[]){ 0,  1,  2,  3, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 4,  5, ASCR_BACK, 1}},         //CharAnim_Left
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_Left
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_LeftAlt
-	{2, (const u8[]){ 6,  7, ASCR_BACK, 1}},         //CharAnim_Down
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_Down
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_DownAlt
-	{2, (const u8[]){ 8,  9, ASCR_BACK, 1}},         //CharAnim_Up
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_Up
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
-	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
+	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //CharAnim_Right
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_RightAlt
 };
 
@@ -110,18 +94,6 @@ void Char_Mom_Tick(Character *character)
 		{0,  43, 196}, //idle 2
 		{0,  43, 197}, //idle 3
 		{0,  43, 197}, //idle 4
-		
-		{1,  87, 197}, //left 1
-		{1,  86, 197}, //left 2
-		
-		{1,  43, 159}, //down 1
-		{1,  43, 161}, //down 2
-		
-		{0,  60, 215}, //up 1
-		{0,  59, 214}, //up 2
-		
-		{0,  16, 182}, //right 1
-		{0,  15, 182}, //right 2
 	};
 	
 	const struct Char_Mom_HairDef *hair_def = &hair_defs[this->frame];
@@ -193,11 +165,6 @@ Character *Char_Mom_New(fixed_t x, fixed_t y)
 	const char **pathp = (const char *[]){
 		"idle0.tim", //Mom_ArcMain_Idle0
 		"idle1.tim", //Mom_ArcMain_Idle1
-		"left.tim",  //Mom_ArcMain_Left
-		"down.tim",  //Mom_ArcMain_Down
-		"up.tim",    //Mom_ArcMain_Up
-		"right.tim", //Mom_ArcMain_Right
-		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;
 	for (; *pathp != NULL; pathp++)
