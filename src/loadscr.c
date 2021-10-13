@@ -23,7 +23,7 @@ void LoadScr_Start(void)
 	RECT loading_src = {0, 0, 255, 255};
 	RECT loading_dst = {(SCREEN_WIDTH - 300) >> 1, (SCREEN_HEIGHT - 224) >> 1, 300, 224};
 	Gfx_Tex loading_tex;
-	Gfx_SetClear(202, 255, 77);
+	Gfx_SetClear(8, 6, 5);
 	Gfx_LoadTex(&loading_tex, IO_Read("\\MENU\\LOADING.TIM;1"), GFX_LOADTEX_FREE);
 	Timer_Reset();
 	

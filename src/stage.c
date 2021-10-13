@@ -1240,7 +1240,7 @@ void Stage_Tick(void)
 				}
 				else
 				{
-					Menu_Load(MenuPage_Mods);
+					Menu_Load(MenuPage_Credits);
 				}
 				LoadScr_End();
 				

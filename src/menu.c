@@ -339,13 +339,13 @@ void Menu_Tick(void)
 						break;
 					
 					case 7:
-						menu.font_bold.draw(&menu.font_bold, "NEWGROUNDS",    SCREEN_WIDTH2, SCREEN_HEIGHT2 - 32, FontAlign_Center);
+						menu.font_bold.draw(&menu.font_bold, "FUNKG",    SCREEN_WIDTH2, SCREEN_HEIGHT2 - 32, FontAlign_Center);
 						Gfx_BlitTex(&menu.tex_ng, &src_ng, (SCREEN_WIDTH - 128) >> 1, SCREEN_HEIGHT2 - 16);
 				//Fallthrough
 					case 6:
 					case 5:
-						menu.font_bold.draw(&menu.font_bold, "IN ASSOCIATION", SCREEN_WIDTH2, SCREEN_HEIGHT2 - 64, FontAlign_Center);
-						menu.font_bold.draw(&menu.font_bold, "WITH",           SCREEN_WIDTH2, SCREEN_HEIGHT2 - 48, FontAlign_Center);
+						menu.font_bold.draw(&menu.font_bold, "ORIGINAL MOD", SCREEN_WIDTH2, SCREEN_HEIGHT2 - 64, FontAlign_Center);
+						menu.font_bold.draw(&menu.font_bold, "BY",           SCREEN_WIDTH2, SCREEN_HEIGHT2 - 48, FontAlign_Center);
 						break;
 					
 					case 11:
@@ -460,8 +460,8 @@ void Menu_Tick(void)
 			static const char *menu_options[] = {
 				"STORY MODE",
 				"FREEPLAY",
-				"MODS",
 				"OPTIONS",
+				"CREDITS",
 			};
 			
 			//Initialize page
@@ -509,12 +509,11 @@ void Menu_Tick(void)
 						case 1: //Freeplay
 							menu.next_page = MenuPage_Freeplay;
 							break;
-						case 2: //Mods
-							menu.next_page = MenuPage_Mods;
-							break;
-						case 3: //Options
+						case 2: //Options
 							menu.next_page = MenuPage_Options;
 							break;
+						case 3: //Big Chungus???
+						    menu.next_page = MenuPage_Credits;
 					}
 					menu.next_select = 0;
 					menu.trans_time = FIXED_UNIT;
@@ -560,8 +559,8 @@ void Menu_Tick(void)
 			Menu_DrawBack(
 				menu.next_page == menu.page || menu.next_page == MenuPage_Title,
 				menu.scroll >> (FIXED_SHIFT + 1),
-				253 >> 1, 231 >> 1, 113 >> 1,
-				253 >> 1, 113 >> 1, 155 >> 1
+				251 >> 1, 198 >> 1, 165 >> 1,
+				251 >> 1, 198 >> 1, 165 >> 1
 			);
 			break;
 		}
@@ -574,7 +573,7 @@ void Menu_Tick(void)
 				const char *name;
 				const char *tracks[3];
 			} menu_options[] = {
-				{"1", StageId_V_1, "A LITTLE TROLLING", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
+				{"1", StageId_1_1, "A LITTLE TROLLING", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
 			};
 			
 			//Initialize page
@@ -784,12 +783,12 @@ void Menu_Tick(void)
 			Menu_DrawBack(
 				true,
 				8,
-				146 >> 1, 113 >> 1, 253 >> 1,
+				93 >> 1, 171 >> 1, 251 >> 1,
 				0, 0, 0
 			);
 			break;
 		}
-		case MenuPage_Mods:
+		case MenuPage_Credits:
 		{
 			static const struct
 			{
@@ -797,10 +796,23 @@ void Menu_Tick(void)
 				const char *text;
 				boolean difficulty;
 			} menu_options[] = {
-				{StageId_Kapi_1, "VS KAPI", false},
-				{StageId_Clwn_1, "VS TRICKY", true},
-				{StageId_Clwn_4, "   EXPURGATION", false},
-				{StageId_2_4,    "CLUCKED", false},
+				{StageId_1_1, "psxfunkin", false},
+				{StageId_1_1, "  CUCKYDEV", false},
+				{StageId_1_1, "v psx port", false},
+				{StageId_1_1, "  BILIOUSDATA", false},
+				{StageId_1_1, "original vs v mod", false},
+				{StageId_1_1, "art and music", false},
+				{StageId_1_1, "  ANONYMOUS USERS", false},
+				{StageId_1_1, "charting", false},
+				{StageId_1_1, "  DUDE", false},
+				{StageId_1_1, "", false},
+				{StageId_1_1, "special thanks", false},
+				{StageId_1_1, "  MR P", false},
+				{StageId_1_1, "for motivating me", false},
+				{StageId_1_1, "  CUCKYDEV", false},
+				{StageId_1_1, "for helping my dumb ass", false},
+				{StageId_1_1, "  PSXFUNKIN DISCORD", false},
+				{StageId_1_1, "for being a cool place", false},
 			};
 			
 			//Initialize page
@@ -812,7 +824,7 @@ void Menu_Tick(void)
 			
 			//Draw page label
 			menu.font_bold.draw(&menu.font_bold,
-				"MODS",
+				"CREDITS",
 				16,
 				SCREEN_HEIGHT - 32,
 				FontAlign_Left
@@ -841,22 +853,11 @@ void Menu_Tick(void)
 						menu.select = 0;
 				}
 				
-				//Select option if cross is pressed
-				if (pad_state.press & (PAD_START | PAD_CROSS))
-				{
-					menu.next_page = MenuPage_Stage;
-					menu.page_param.stage.id = menu_options[menu.select].stage;
-					menu.page_param.stage.story = true;
-					if (!menu_options[menu.select].difficulty)
-						menu.page_param.stage.diff = StageDiff_Hard;
-					Trans_Start();
-				}
-				
 				//Return to main menu if circle is pressed
 				if (pad_state.press & PAD_CIRCLE)
 				{
 					menu.next_page = MenuPage_Main;
-					menu.next_select = 2; //Mods
+					menu.next_select = 3; //Credits
 					Trans_Start();
 				}
 			}
@@ -975,7 +976,7 @@ void Menu_Tick(void)
 				if (pad_state.press & PAD_CIRCLE)
 				{
 					menu.next_page = MenuPage_Main;
-					menu.next_select = 3; //Options
+					menu.next_select = 2; //Options
 					Trans_Start();
 				}
 			}
@@ -1016,7 +1017,7 @@ void Menu_Tick(void)
 			Menu_DrawBack(
 				true,
 				8,
-				253 >> 1, 113 >> 1, 155 >> 1,
+				173 >> 1, 79 >> 1, 215 >> 1,
 				0, 0, 0
 			);
 			break;
