@@ -40,6 +40,7 @@ SRCS = src/main.c \
        src/character/senpaim.c \
        src/character/tank.c \
        src/character/gf.c \
+       src/character/gfv.c \
        src/character/bfv.c \
        src/character/vrage.c \
        src/character/vcalm.c \

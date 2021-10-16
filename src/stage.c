@@ -56,6 +56,7 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "character/senpaim.h"
 #include "character/tank.h"
 #include "character/gf.h"
+#include "character/gfv.h"
 #include "character/bfv.h"
 #include "character/vrage.h"
 #include "character/vcalm.h"

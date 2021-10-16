@@ -661,7 +661,7 @@ void Menu_Tick(void)
 			
 			//Draw upper strip
 			RECT name_bar = {0, 16, SCREEN_WIDTH, 32};
-			Gfx_DrawRect(&name_bar, 249, 207, 81);
+			Gfx_DrawRect(&name_bar, 253, 0, 0);
 			
 			//Draw options
 			s32 next_scroll = menu.select * FIXED_DEC(48,1);

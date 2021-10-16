@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Defines the ISO project -->
-<iso_project image_name="funkin.bin" cue_sheet="funkin.cue" no_xa="0">
+<iso_project image_name="vs v.bin" cue_sheet="vs v.cue" no_xa="0">
 	<!-- Data track -->
 	<track type="data">
 		<!-- Identifiers -->
@@ -181,7 +181,7 @@
 				<file name = "7.3p.cht" type = "data" source = "iso/week7/picospeaker.json.cht"/>
 			</dir>
 
-			<!-- Week /v/ assets -->
+			<!-- Old Week /v/ remnants -->
 			<dir name = "week8">
 			    <!-- Background art -->
                 <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
@@ -278,6 +278,7 @@
 				<!-- Girlfriend assets -->
 				<file name = "gf.arc" type = "data" source = "iso/gf/main.arc"/>
 				<file name = "speaker.tim" type = "data" source = "iso/gf/speaker.tim"/>
+				<file name = "gfv.arc" type = "data" source = "iso/gfv/main.arc"/>
 
 				<!-- /v/ assets -->
 				<file name = "vrage.arc" type = "data" source = "iso/vrage/main.arc"/>

@@ -25,6 +25,7 @@ all: \
 	iso/gf/main.arc \
 	iso/gf/speaker.tim \
 	iso/bfv/main.arc \
+	iso/gfv/main.arc \
 	iso/vrage/main.arc \
 	iso/vcalm/main.arc \
 	iso/cancer/main.arc \
@@ -77,6 +78,9 @@ iso/tank/good.arc: iso/tank/good0.tim iso/tank/good1.tim iso/tank/good2.tim iso/
 
 # GF
 iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim
+
+# GFv
+iso/gfv/main.arc: iso/gfv/gfv.tim
 
 # bfv
 iso/bfv/main.arc: iso/bfv/hit.tim iso/bfv/miss.tim
