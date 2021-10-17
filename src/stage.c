@@ -70,6 +70,7 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "stage/week5.h"
 #include "stage/week7.h"
 #include "stage/vtown.h"
+#include "stage/wreck.h"
 
 static const StageDef stage_defs[StageId_Max] = {
 	#include "stagedef_disc1.h"
@@ -1589,28 +1590,28 @@ void Stage_Tick(void)
 			}
 			
 			//Hardcoded stage stuff
-			switch (stage.stage_id)
-			{
-				case StageId_1_2: //Fresh GF bop
-					switch (stage.song_step)
-					{
-						case 16 << 2:
-							stage.gf_speed = 2 << 2;
-							break;
-						case 48 << 2:
-							stage.gf_speed = 1 << 2;
-							break;
-						case 80 << 2:
-							stage.gf_speed = 2 << 2;
-							break;
-						case 112 << 2:
-							stage.gf_speed = 1 << 2;
-							break;
-					}
-					break;
-				default:
-					break;
-			}
+			//switch (stage.stage_id)
+			//{
+			//	case StageId_1_2: //Fresh GF bop
+			//		switch (stage.song_step)
+			//		{
+			//			case 16 << 2:
+			//				stage.gf_speed = 2 << 2;
+			//				break;
+			//			case 48 << 2:
+			//				stage.gf_speed = 1 << 2;
+			//				break;
+			//			case 80 << 2:
+			//				stage.gf_speed = 2 << 2;
+			//				break;
+			//			case 112 << 2:
+			//				stage.gf_speed = 1 << 2;
+			//				break;
+			//		}
+			//		break;
+			//	default:
+			//		break;
+			//}
 			
 			//Draw stage foreground
 			if (stage.back->draw_fg != NULL)

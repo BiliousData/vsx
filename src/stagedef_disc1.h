@@ -30,7 +30,7 @@
 	{ //StageId_1_3 (Harmony)
 		//Characters
 		{Char_BFV_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vcalm_New,  FIXED_DEC(-120,1),  FIXED_DEC(140,1)},
+		{Char_Vcalm_New,  FIXED_DEC(-135,1),  FIXED_DEC(128,1)},
 		{Char_GFV_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
@@ -50,7 +50,7 @@
         {Char_GF_New,        FIXED_DEC(500,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
-		Back_Dummy_New,
+		Back_Wreck_New,
 		
 		//Song info
 		{FIXED_DEC(29,10),FIXED_DEC(29,10),FIXED_DEC(29,10)},

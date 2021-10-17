@@ -170,7 +170,7 @@ void Char_BFV_Tick(Character *character)
 		{
 			switch (stage.stage_id)
 			{
-				case StageId_V_1: //uhh Vidyagaems peace???
+				case StageId_V_1: //uhh Vidyagaems peace??? Not anymore.
 				    if ((stage.song_step) == 188)
 					    character->set_anim(character, PlayerAnim_Peace);
 					break;
@@ -327,7 +327,7 @@ Character *Char_BFV_New(fixed_t x, fixed_t y)
 	this->character.health_i = 0;
 	
 	this->character.focus_x = FIXED_DEC(-50,1);
-	this->character.focus_y = FIXED_DEC(-65,1);
+	this->character.focus_y = FIXED_DEC(-85,1);
 	this->character.focus_zoom = FIXED_DEC(1,1);
 	
 	//Load art
