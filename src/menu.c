@@ -60,6 +60,7 @@ static const char *funny_messages[][2] = {
 	{"ITS A PORT", "ITS WORSE"},
 	{"WOW GATO", "WOW GATO"},
 	{"BALLS FISH", "BALLS FISH"},
+	{"YOU KNOW", "WHO ELSE"},
 };
 
 //Menu state
@@ -796,21 +797,30 @@ void Menu_Tick(void)
 				const char *text;
 				boolean difficulty;
 			} menu_options[] = {
-				{StageId_1_1, "psxfunkin", false},
-				{StageId_1_1, "  CUCKYDEV", false},
-				{StageId_1_1, "v psx port", false},
-				{StageId_1_1, "  BILIOUSDATA", false},
 				{StageId_1_1, "original vs v mod", false},
 				{StageId_1_1, "art and music", false},
 				{StageId_1_1, "  ANONYMOUS USERS", false},
 				{StageId_1_1, "charting", false},
 				{StageId_1_1, "  DUDE", false},
 				{StageId_1_1, "", false},
+				{StageId_1_1, "psxfunkin", false},
+				{StageId_1_1, "  CUCKYDEV", false},
+				{StageId_1_1, "", false},
+				{StageId_1_1, "v psx port", false},
+				{StageId_1_1, "  BILIOUSDATA", false},				
+				{StageId_1_1, "", false},
 				{StageId_1_1, "special thanks", false},
 				{StageId_1_1, "  MR P", false},
 				{StageId_1_1, "for motivating me", false},
+				{StageId_1_1, "", false},
 				{StageId_1_1, "  CUCKYDEV", false},
-				{StageId_1_1, "for helping my dumb ass", false},
+				{StageId_1_1, "for helping", false},
+				{StageId_1_1, "my dumb ass", false},
+				{StageId_1_1, "", false},
+				{StageId_1_1, "ZERIBEN", false},
+				{StageId_1_1, "apparently we both", false},
+				{StageId_1_1, "had the same idea", false},
+				{StageId_1_1, "for credits", false},
 				{StageId_1_1, "  PSXFUNKIN DISCORD", false},
 				{StageId_1_1, "for being a cool place", false},
 			};

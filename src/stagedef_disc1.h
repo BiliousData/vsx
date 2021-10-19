@@ -45,8 +45,8 @@
 	},
 	{ //StageId_1_4 (Infinitrigger)
 		//Characters
-		{Char_BF_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-        {Char_Cancer_New,  FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
+		{Char_BFALT_New,       FIXED_DEC(50,1),  FIXED_DEC(90,1)},
+        {Char_Cancer_New,  FIXED_DEC(-140,1),  FIXED_DEC(110,1)},
         {Char_GF_New,        FIXED_DEC(500,1),    FIXED_DEC(0,1)},
 		
 		//Stage background
