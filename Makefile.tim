@@ -85,7 +85,7 @@ iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim
 iso/gfv/main.arc: iso/gfv/gfv.tim
 
 # bfv
-iso/bfv/main.arc: iso/bfv/hit.tim iso/bfv/miss.tim
+iso/bfv/main.arc: iso/bfv/hit.tim iso/bfv/miss.tim iso/bfv/ban0.tim iso/bfv/ban1.tim iso/bfv/ban2.tim
 
 # bf alt
 iso/bfalt/main.arc: iso/bfalt/idle.tim iso/bfalt/up.tim iso/bfalt/left.tim iso/bfalt/right.tim iso/bfalt/down.tim iso/bfalt/upmiss.tim iso/bfalt/leftmiss.tim iso/bfalt/rmiss.tim iso/bfalt/downmiss.tim
