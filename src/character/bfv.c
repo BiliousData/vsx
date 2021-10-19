@@ -60,23 +60,23 @@ static const CharFrame char_bfv_frame[] = {
 	
 	{BFV_ArcMain_Hit,  {117,  62,  57,  61}, { 52, 93}}, //4 left 1
 	{BFV_ArcMain_Hit,  {175,  64,  56,  61}, { 51, 93}}, //5 left 2
-	{BFV_ArcMain_Miss, {119,   0,  56,  65}, { 52, 93}}, //6 left miss 1
-	{BFV_ArcMain_Miss, {176,   0,  56,  65}, { 51, 93}}, //7 left miss 2
+	{BFV_ArcMain_Miss, {119,   0,  56,  65}, { 53,  97}}, //6 left miss 1
+	{BFV_ArcMain_Miss, {176,   0,  56,  65}, { 53,  97}}, //7 left miss 2
 	
 	{BFV_ArcMain_Hit,  {  0,  61,  58,  55}, { 53,  87}}, //8 down 1
 	{BFV_ArcMain_Hit,  { 59,  61,  57,  56}, { 52,  88}}, //9 down 2
-	{BFV_ArcMain_Miss, {  0,   0,  58,  61}, { 53,  87}}, //10 down miss 1
-	{BFV_ArcMain_Miss, { 59,   0,  59,  60}, { 52,  88}}, //11 down miss 2
+	{BFV_ArcMain_Miss, {  0,   0,  58,  61}, { 53,  93}}, //10 down miss 1
+	{BFV_ArcMain_Miss, { 59,   0,  59,  60}, { 54,  92}}, //11 down miss 2
 	
 	{BFV_ArcMain_Hit,  {113, 124,  50,  65}, { 43, 97}}, //12 up 1
 	{BFV_ArcMain_Hit,  {164, 126,  51,  64}, { 44, 96}}, //13 up 2
-	{BFV_ArcMain_Miss, {115,  66,  52,  63}, { 43, 97}}, //14 up miss 1
-	{BFV_ArcMain_Miss, {168,  67,  52,  64}, { 44, 96}}, //15 up miss 2
+	{BFV_ArcMain_Miss, {115,  66,  52,  63}, { 46,  95}}, //14 up miss 1
+	{BFV_ArcMain_Miss, {168,  67,  52,  64}, { 46,  96}}, //15 up miss 2
 	
 	{BFV_ArcMain_Hit,  {  0, 117,  56,  60}, { 45, 92}}, //16 right 1
 	{BFV_ArcMain_Hit,  { 57, 118,  55,  61}, { 45, 93}}, //17 right 2
-	{BFV_ArcMain_Miss, {  0,  62,  56,  64}, { 45, 92}}, //18 right miss 1
-	{BFV_ArcMain_Miss, { 57,  61,  57,  64}, { 45, 93}}, //19 right miss 2
+	{BFV_ArcMain_Miss, {  0,  62,  56,  64}, { 46,  96}}, //18 right miss 1
+	{BFV_ArcMain_Miss, { 57,  61,  57,  64}, { 46,  96}}, //19 right miss 2
 
 	{BFV_ArcMain_Ban0,  { 0,  0,  161, 129}, {53, 92}}, //20
 	{BFV_ArcMain_Ban0,  { 0,  127,  161, 129}, {53, 92}}, //21
