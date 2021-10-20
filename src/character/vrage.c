@@ -43,30 +43,30 @@ typedef struct
 
 //v rage character definitions
 static const CharFrame char_vrage_frame[] = {
-	{Vrage_ArcMain_Idle0, {  0,   0, 136, 107}, { 42, 183+4}}, //0 idle 1
-	{Vrage_ArcMain_Idle0, {  0, 108, 136, 107}, { 43, 181+4}}, //1 idle 2
-	{Vrage_ArcMain_Idle1, {  0,   0, 137, 107}, { 42, 181+4}}, //2 idle 3
-	{Vrage_ArcMain_Idle1, {  0, 108, 137, 107}, { 41, 183+4}}, //3 idle 4
+	{Vrage_ArcMain_Idle0, {  0,   0, 136, 107}, { 30, 150}}, //0 idle 1
+	{Vrage_ArcMain_Idle0, {  0, 108, 136, 107}, { 30, 150}}, //1 idle 2
+	{Vrage_ArcMain_Idle1, {  0,   0, 137, 107}, { 31, 150}}, //2 idle 3
+	{Vrage_ArcMain_Idle1, {  0, 108, 137, 107}, { 31, 150}}, //3 idle 4
 	
-	{Vrage_ArcMain_Left, {  0,   0,  136, 106}, { 40, 185+4}}, //4 left 1
-	{Vrage_ArcMain_Left, {  0,   107,  136, 108}, { 40, 185+4}}, //5 left 2
+	{Vrage_ArcMain_Left, {  0,   0,  136, 106}, { 30, 150}}, //4 left 1
+	{Vrage_ArcMain_Left, {  0,   107,  136, 108}, { 30, 151}}, //5 left 2
 	
-	{Vrage_ArcMain_Down, {  0,   0, 136, 98}, { 43, 174+4}}, //6 down 1
-	{Vrage_ArcMain_Down, {  0,   99, 136, 100}, { 43, 175+4}}, //7 down 2
+	{Vrage_ArcMain_Down, {  0,   0, 136, 98}, { 30, 141}}, //6 down 1
+	{Vrage_ArcMain_Down, {  0,   99, 136, 100}, { 30, 143}}, //7 down 2
 	
-	{Vrage_ArcMain_Up, {  0,   0, 136, 105}, { 40, 196+4}}, //8 up 1
-	{Vrage_ArcMain_Up, {  0,   0, 136, 108}, { 40, 194+4}}, //9 up 2
+	{Vrage_ArcMain_Up, {  0,   0, 136, 105}, { 30, 148}}, //8 up 1
+	{Vrage_ArcMain_Up, {  0,   106, 136, 108}, { 30, 151}}, //9 up 2
 	
-	{Vrage_ArcMain_Right, {  0,   0, 136, 98}, { 43, 189+4}}, //10 right 1
-	{Vrage_ArcMain_Right, {  0,   99, 136, 97}, { 42, 189+4}}, //11 right 2
-	{Vrage_ArcMain_RightB, {  0,   0, 137, 109}, { 43, 189+4}}, //12 right alt 1
-	{Vrage_ArcMain_RightB, {  0,   110, 137, 109}, { 43, 189+4}}, //13 right alt 2
+	{Vrage_ArcMain_Right, {  0,   0, 136, 98}, { 30, 141}}, //10 right 1
+	{Vrage_ArcMain_Right, {  0,   99, 136, 97}, { 30, 140}}, //11 right 2
+	{Vrage_ArcMain_RightB, {  0,   0, 137, 109}, { 31, 152}}, //12 right alt 1
+	{Vrage_ArcMain_RightB, {  0,   110, 137, 109}, { 31, 152}}, //13 right alt 2
 
-	{Vrage_ArcMain_Fuck0, {  0,  0, 136, 96}, { 40, 196+4}},
-	{Vrage_ArcMain_Fuck0, {  0,  97, 136, 99}, { 40, 196+4}},
-	{Vrage_ArcMain_Fuck1, {  0,  0, 136, 99}, { 40, 196+4}},
-	{Vrage_ArcMain_Fuck1, {  0,  100, 137, 100}, { 40, 196+4}},
-	{Vrage_ArcMain_Fuck2, {  0,  0, 137, 100}, { 40, 196+4}}
+	{Vrage_ArcMain_Fuck0, {  0,  0, 136, 96}, { 31, 139}},
+	{Vrage_ArcMain_Fuck0, {  0,  97, 136, 99}, { 30, 142}},
+	{Vrage_ArcMain_Fuck1, {  0,  0, 136, 99}, { 30, 142}},
+	{Vrage_ArcMain_Fuck1, {  0,  100, 137, 100}, { 31, 143}},
+	{Vrage_ArcMain_Fuck2, {  0,  0, 137, 100}, { 31, 143}}
 
 };
 
@@ -170,7 +170,7 @@ Character *Char_Vrage_New(fixed_t x, fixed_t y)
 	this->character.health_i = 12;
 	
 	this->character.focus_x = FIXED_DEC(65,1);
-	this->character.focus_y = FIXED_DEC(-165,1);
+	this->character.focus_y = FIXED_DEC(-125,1);
 	this->character.focus_zoom = FIXED_DEC(1,1);
 	
 	//Load art
