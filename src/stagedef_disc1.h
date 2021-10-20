@@ -1,8 +1,8 @@
 	{ //StageId_1_1 (Vidyagaems)
 		//Characters
 		{Char_BFV_New,       FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-        {Char_Vrage_New,  FIXED_DEC(-120,1),  FIXED_DEC(170,1)},
-        {Char_GFV_New,        FIXED_DEC(0,1),    FIXED_DEC(40,1)},
+        {Char_Vrage_New,  FIXED_DEC(-149,1),  FIXED_DEC(128,1)},
+        {Char_GFV_New,        FIXED_DEC(2,1),    FIXED_DEC(75,1)},
         //Stage background
         Back_Vtown_New,
         //Song info
@@ -14,8 +14,8 @@
 	{ //StageId_1_2 (Sage)
 		//Characters
 		{Char_BFV_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vrage_New, FIXED_DEC(-120,1),  FIXED_DEC(100,1)},
-		{Char_GFV_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
+		{Char_Vrage_New, FIXED_DEC(-149,1),  FIXED_DEC(128,1)},
+		{Char_GFV_New,     FIXED_DEC(2,1),    FIXED_DEC(75,1)},
 		
 		//Stage background
 		Back_Vtown_New,
@@ -30,8 +30,8 @@
 	{ //StageId_1_3 (Harmony)
 		//Characters
 		{Char_BFV_New,    FIXED_DEC(60,1),  FIXED_DEC(100,1)},
-		{Char_Vcalm_New,  FIXED_DEC(-135,1),  FIXED_DEC(128,1)},
-		{Char_GFV_New,     FIXED_DEC(0,1),    FIXED_DEC(0,1)},
+		{Char_Vcalm_New,  FIXED_DEC(-149,1),  FIXED_DEC(128,1)},
+		{Char_GFV_New,     FIXED_DEC(2,1),    FIXED_DEC(75,1)},
 		
 		//Stage background
 		Back_Vtown_New,
@@ -104,7 +104,7 @@
 		//Song info
 		{FIXED_DEC(13,10),FIXED_DEC(13,10),FIXED_DEC(16,10)},
 		2, 3,
-		XA_Monster, 0,
+		XA_Sage, 0,
 		
 		StageId_2_3, 0
 	},
@@ -121,7 +121,7 @@
 		//Song info
 		{FIXED_DEC(12,10),FIXED_DEC(14,10),FIXED_DEC(16,10)},
 		3, 1,
-		XA_Pico, 0,
+		XA_Sage, 0,
 		
 		StageId_3_2, STAGE_LOAD_FLAG
 	},
@@ -137,7 +137,7 @@
 		//Song info
 		{FIXED_DEC(1,1),FIXED_DEC(13,10),FIXED_DEC(2,1)},
 		3, 2,
-		XA_Philly, 2,
+		XA_Sage, 2,
 		
 		StageId_3_3, STAGE_LOAD_FLAG
 	},
@@ -153,7 +153,7 @@
 		//Song info
 		{FIXED_DEC(12,10),FIXED_DEC(15,10),FIXED_DEC(23,10)},
 		3, 3,
-		XA_Blammed, 0,
+		XA_Sage, 0,
 		
 		StageId_3_3, 0
 	},
