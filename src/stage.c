@@ -352,12 +352,23 @@ static void Stage_NoteCheck(PlayerState *this, u8 type)
 					this->health -= 2000;
 				else
 					this->health += 240;
-				if (this->character->spec & CHAR_SPEC_MISSANIM)
-					this->character->set_anim(this->character, note_anims[type & 0x3][1]);
-				else
-					this->character->set_anim(this->character, note_anims[type & 0x3][0]);
-				this->arrow_hitan[type & 0x3] = -1;
-				return;
+				if (stage.stage_id == StageId_1_4) {
+				    if (this->character->spec & CHAR_SPEC_MISSANIM)
+				    	this->character->set_anim(this->character, note_anims[type & 0x3][1]);
+				    else
+				    	this->character->set_anim(this->character, note_anims[type & 0x3][0]);
+				    this->arrow_hitan[type & 0x3] = -1;
+				    return;
+				    }
+				else {
+				    if (this->character->spec & CHAR_SPEC_MISSANIM)
+				    	this->character->set_anim(this->character, note_anims[type & 0x3][0]);
+				    else
+				    	this->character->set_anim(this->character, note_anims[type & 0x3][0]);
+				    this->arrow_hitan[type & 0x3] = stage.step_time;
+				    return;
+				    }
+
 			#endif
 		}
 	}
