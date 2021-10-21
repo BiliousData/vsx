@@ -810,10 +810,8 @@ void Menu_Tick(void)
 				{StageId_1_1, "  BILIOUSDATA", false},				
 				{StageId_1_1, "", false},
 				{StageId_1_1, "special thanks", false},
-				{StageId_1_1, "  MR P", false},
-				{StageId_1_1, "for motivating me", false},
 				{StageId_1_1, "", false},
-				{StageId_1_1, "  CUCKYDEV", false},
+				{StageId_1_1, "CUCKYDEV", false},
 				{StageId_1_1, "for helping", false},
 				{StageId_1_1, "my dumb ass", false},
 				{StageId_1_1, "", false},
@@ -821,8 +819,9 @@ void Menu_Tick(void)
 				{StageId_1_1, "apparently we both", false},
 				{StageId_1_1, "had the same idea", false},
 				{StageId_1_1, "for credits", false},
-				{StageId_1_1, "  PSXFUNKIN DISCORD", false},
-				{StageId_1_1, "for being a cool place", false},
+                {StageId_1_1, "PSXFUNKIN DISCORD", false},
+				{StageId_1_1, "for motivating me", false},
+				{StageId_1_1, "to finish the mod", false},
 			};
 			
 			//Initialize page
