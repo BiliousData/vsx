@@ -202,7 +202,7 @@ Character *Char_Vcalm_New(fixed_t x, fixed_t y)
 	//Set character information
 	this->character.spec = 0;
 	
-	this->character.health_i = 12;
+	this->character.health_i = 13;
 	
 	this->character.focus_x = FIXED_DEC(65,1);
 	this->character.focus_y = FIXED_DEC(-125,1);
