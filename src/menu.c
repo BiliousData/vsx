@@ -695,12 +695,13 @@ void Menu_Tick(void)
 			{
 				StageId stage;
 				const char *text;
+				boolean difficulty;
 			} menu_options[] = {
 				//{StageId_4_4, "TEST"},
-				{StageId_1_1, "VIDYAGAEMS"},
-				{StageId_1_2, "SAGE"},
-				{StageId_1_3, "HARMONY"},
-				{StageId_1_4, "INFINITRIGGER"},
+				{StageId_1_1, "VIDYAGAEMS", true},
+				{StageId_1_2, "SAGE", true},
+				{StageId_1_3, "HARMONY", true},
+				{StageId_1_4, "INFINITRIGGER", false},
 			};
 			
 			//Initialize page
@@ -719,7 +720,8 @@ void Menu_Tick(void)
 			);
 			
 			//Draw difficulty selector
-			Menu_DifficultySelector(SCREEN_WIDTH - 100, SCREEN_HEIGHT2 - 48);
+			if (menu_options[menu.select].difficulty)
+				Menu_DifficultySelector(SCREEN_WIDTH - 100, SCREEN_HEIGHT2 - 48);
 			
 			//Handle option and selection
 			if (menu.next_page == menu.page && Trans_Idle())
@@ -819,6 +821,7 @@ void Menu_Tick(void)
 				{StageId_1_1, "apparently we both", false},
 				{StageId_1_1, "had the same idea", false},
 				{StageId_1_1, "for credits", false},
+				{StageId_1_1, "", false},
                 {StageId_1_1, "PSXFUNKIN DISCORD", false},
 				{StageId_1_1, "for motivating me", false},
 				{StageId_1_1, "to finish the mod", false},
