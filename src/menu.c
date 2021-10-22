@@ -574,7 +574,7 @@ void Menu_Tick(void)
 				const char *name;
 				const char *tracks[3];
 			} menu_options[] = {
-				{"1", StageId_1_1, "A LITTLE TROLLING", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
+				{"1", StageId_1_1, "VS V TAN", {"VIDYAGAEMS", "SAGE", "HARMONY"}},
 			};
 			
 			//Initialize page
