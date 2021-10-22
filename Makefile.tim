@@ -88,7 +88,7 @@ iso/gfv/main.arc: iso/gfv/gfv.tim
 iso/bfv/main.arc: iso/bfv/hit.tim iso/bfv/miss.tim iso/bfv/ban0.tim iso/bfv/ban1.tim iso/bfv/ban2.tim
 
 # bf alt
-iso/bfalt/main.arc: iso/bfalt/idle.tim iso/bfalt/up.tim iso/bfalt/left.tim iso/bfalt/right.tim iso/bfalt/down.tim iso/bfalt/upmiss.tim iso/bfalt/leftmiss.tim iso/bfalt/rmiss.tim iso/bfalt/downmiss.tim
+iso/bfalt/main.arc: iso/bfalt/idle0.tim iso/bfalt/idle1.tim iso/bfalt/up.tim iso/bfalt/left.tim iso/bfalt/right.tim iso/bfalt/down.tim iso/bfalt/upmiss.tim iso/bfalt/leftmiss.tim iso/bfalt/rmiss.tim iso/bfalt/downmiss.tim iso/bfalt/ban0.tim iso/bfalt/ban1.tim iso/bfalt/ban2.tim
 
 # vrage
 iso/vrage/main.arc: iso/vrage/idle0.tim iso/vrage/idle1.tim iso/vrage/left.tim iso/vrage/right.tim iso/vrage/up.tim iso/vrage/down.tim iso/vrage/rightb.tim iso/vrage/fuck0.tim iso/vrage/fuck1.tim iso/vrage/fuck2.tim

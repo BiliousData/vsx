@@ -12,32 +12,12 @@
 #include "../random.h"
 #include "../main.h"
 
-//Boyfriend /v/ unused skull fragments
-static SkullFragment char_bfalt_skull[15] = {
-	{ 1 * 8, -87 * 8, -13, -13},
-	{ 9 * 8, -88 * 8,   5, -22},
-	{18 * 8, -87 * 8,   9, -22},
-	{26 * 8, -85 * 8,  13, -13},
-	
-	{-3 * 8, -82 * 8, -13, -11},
-	{ 8 * 8, -85 * 8,  -9, -15},
-	{20 * 8, -82 * 8,   9, -15},
-	{30 * 8, -79 * 8,  13, -11},
-	
-	{-1 * 8, -74 * 8, -13, -5},
-	{ 8 * 8, -77 * 8,  -9, -9},
-	{19 * 8, -75 * 8,   9, -9},
-	{26 * 8, -74 * 8,  13, -5},
-	
-	{ 5 * 8, -73 * 8, -5, -3},
-	{14 * 8, -76 * 8,  9, -6},
-	{26 * 8, -67 * 8, 15, -3},
-};
 
 //Boyfriend /v/ player types
 enum
 {
-	BFALT_ArcMain_Idle,
+	BFALT_ArcMain_Idle0,
+	BFALT_ArcMain_Idle1,
 	BFALT_ArcMain_Up,
 	BFALT_ArcMain_Left,
 	BFALT_ArcMain_Down,
@@ -46,6 +26,9 @@ enum
 	BFALT_ArcMain_Leftmiss,
 	BFALT_ArcMain_Downmiss,
 	BFALT_ArcMain_Rmiss,
+	BFALT_ArcMain_Ban0,
+	BFALT_ArcMain_Ban1,
+	BFALT_ArcMain_Ban2,
 	
 	BFALT_ArcMain_Max,
 };
@@ -69,22 +52,20 @@ typedef struct
 	//Render data and state
 	IO_Data arc_main;
 	IO_Data arc_ptr[BFALT_Arc_Max];
-	
+
 	Gfx_Tex tex, tex_retry;
 	u8 frame, tex_id;
 	
 	u8 retry_bump;
 	
-	SkullFragment skull[COUNT_OF(char_bfalt_skull)];
-	u8 skull_scale;
 } Char_BFALT;
 
 //Boyfriend /v/ player definitions
 static const CharFrame char_bfalt_frame[] = {
-	{BFALT_ArcMain_Idle,     {  0,   0, 121, 105},   { 53,  92}}, //0 idle 1
-	{BFALT_ArcMain_Idle,     {122,   0, 120, 108},   { 53,  95}}, //1 idle 2
-	{BFALT_ArcMain_Idle,     {  0, 106, 117, 109},     { 51,  96}}, //2 idle 3
-	{BFALT_ArcMain_Idle,     {120, 109, 117, 109},     { 49,  96}}, //3 idle 4
+	{BFALT_ArcMain_Idle0,     {  0,   0, 121, 105},   { 53,  92}}, //0 idle 1
+	{BFALT_ArcMain_Idle1,     {122,   0, 120, 108},   { 53,  95}}, //1 idle 2
+	{BFALT_ArcMain_Idle1,     {  0, 106, 117, 109},     { 51,  96}}, //2 idle 3
+	{BFALT_ArcMain_Idle1,     {120, 109, 117, 109},     { 49,  96}}, //3 idle 4
 	
 	{BFALT_ArcMain_Left,     {  0,   0, 154, 108}, { 86,  95}}, //4 left 1
 	{BFALT_ArcMain_Left,     {  0, 109, 154, 108}, { 86,  95}}, //5 left 2
@@ -98,13 +79,22 @@ static const CharFrame char_bfalt_frame[] = {
 	
 	{BFALT_ArcMain_Up,       {  0,   0, 142, 118}, { 74, 105}}, //12 up 1
 	{BFALT_ArcMain_Up,       {  0, 119, 141, 114}, { 73, 101}}, //13 up 2
-	{BFALT_ArcMain_Upmiss,   {  0,   0, 142, 114}, { 74, 105}}, //14 up miss 1
-	{BFALT_ArcMain_Upmiss,   {  0, 115, 142, 114}, { 74, 105}}, //15 up miss 2
+	{BFALT_ArcMain_Upmiss,   {  0,   0, 142, 114}, { 74, 101}}, //14 up miss 1
+	{BFALT_ArcMain_Upmiss,   {  0, 115, 142, 114}, { 74, 101}}, //15 up miss 2
 	
 	{BFALT_ArcMain_Right,    {  0,   0, 138, 110}, { 70,  95}}, //16 right 1
 	{BFALT_ArcMain_Right,    {  0, 111, 137, 111}, { 69,  95}}, //17 right 2
 	{BFALT_ArcMain_Rmiss,    {  0,   0, 137, 111}, { 69,  96}}, //18 right miss 1
 	{BFALT_ArcMain_Rmiss,    {  0, 112, 137, 111}, { 69,  95}}, //19 right miss 2
+
+	{BFALT_ArcMain_Ban0,  { 0,  0,  161, 129}, {93, 122}}, //20
+	{BFALT_ArcMain_Ban0,  { 0,  127,  161, 129}, {93, 122}}, //21
+
+	{BFALT_ArcMain_Ban1,  { 0,  0,  161, 129}, {93, 122}},//22
+	{BFALT_ArcMain_Ban1,  { 0,  127,  161, 129}, {93, 122}},//23
+
+	{BFALT_ArcMain_Ban2,  { 0,  0,  161, 129}, {93, 122}},//24
+	{BFALT_ArcMain_Ban2,  { 0,  127,  161, 129}, {93, 122}},//25
 
 };
 
@@ -121,13 +111,13 @@ static const Animation char_bfalt_anim[PlayerAnim_Max] = {
 	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},         //PlayerAnim_Peace
 	{2, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},       //PlayerAnim_Sweat
 	
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
-	{2, (const u8[]){ 0,  1,  2,  3, 4, ASCR_BACK, 1}}, //CharAnim_Idle
+	{3, (const u8[]){ 20, 21, ASCR_CHGANI, PlayerAnim_Dead1}}, //CharAnim_Idle
+	{3, (const u8[]){ 22, 23, ASCR_CHGANI, PlayerAnim_Dead2}}, //CharAnim_Idle
+	{20, (const u8[]){ 24, ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{1, (const u8[]){ 25, ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{2, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{2, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
+	{2, (const u8[]){ ASCR_CHGANI, PlayerAnim_Dead3}}, //CharAnim_Idle
 };
 
 //Boyfriend /v/ player functions
@@ -187,106 +177,6 @@ void Char_BFALT_Tick(Character *character)
 		}
 	}
 	
-	//Retry screen
-	if (character->animatable.anim >= PlayerAnim_Dead3)
-	{
-		//Tick skull fragments
-		if (this->skull_scale)
-		{
-			SkullFragment *frag = this->skull;
-			for (size_t i = 0; i < COUNT_OF_MEMBER(Char_BFALT, skull); i++, frag++)
-			{
-				//Draw fragment
-				RECT frag_src = {
-					(i & 1) ? 112 : 96,
-					(i >> 1) << 4,
-					16,
-					16
-				};
-				fixed_t skull_dim = (FIXED_DEC(16,1) * this->skull_scale) >> 6;
-				fixed_t skull_rad = skull_dim >> 1;
-				RECT_FIXED frag_dst = {
-					character->x + (((fixed_t)frag->x << FIXED_SHIFT) >> 3) - skull_rad - stage.camera.x,
-					character->y + (((fixed_t)frag->y << FIXED_SHIFT) >> 3) - skull_rad - stage.camera.y,
-					skull_dim,
-					skull_dim,
-				};
-				Stage_DrawTex(&this->tex_retry, &frag_src, &frag_dst, FIXED_MUL(stage.camera.zoom, stage.bump));
-				
-				//Move fragment
-				frag->x += frag->xsp;
-				frag->y += ++frag->ysp;
-			}
-			
-			//Decrease scale
-			this->skull_scale--;
-		}
-		
-		//Draw input options
-		u8 input_scale = 16 - this->skull_scale;
-		if (input_scale > 16)
-			input_scale = 0;
-		
-		RECT button_src = {
-			 0, 96,
-			16, 16
-		};
-		RECT_FIXED button_dst = {
-			character->x - FIXED_DEC(32,1) - stage.camera.x,
-			character->y - FIXED_DEC(88,1) - stage.camera.y,
-			(FIXED_DEC(16,1) * input_scale) >> 4,
-			FIXED_DEC(16,1),
-		};
-		
-		//Cross - Retry
-		Stage_DrawTex(&this->tex_retry, &button_src, &button_dst, FIXED_MUL(stage.camera.zoom, stage.bump));
-		
-		//Circle - Blueball
-		button_src.x = 16;
-		button_dst.y += FIXED_DEC(56,1);
-		Stage_DrawTex(&this->tex_retry, &button_src, &button_dst, FIXED_MUL(stage.camera.zoom, stage.bump));
-		
-		//Draw 'RETRY'
-		u8 retry_frame;
-		
-		if (character->animatable.anim == PlayerAnim_Dead6)
-		{
-			//Selected retry
-			retry_frame = 2 - (this->retry_bump >> 3);
-			if (retry_frame >= 3)
-				retry_frame = 0;
-			if (this->retry_bump & 2)
-				retry_frame += 3;
-			
-			if (++this->retry_bump == 0xFF)
-				this->retry_bump = 0xFD;
-		}
-		else
-		{
-			//Idle
-			retry_frame = 1 +  (this->retry_bump >> 2);
-			if (retry_frame >= 3)
-				retry_frame = 0;
-			
-			if (++this->retry_bump >= 55)
-				this->retry_bump = 0;
-		}
-		
-		RECT retry_src = {
-			(retry_frame & 1) ? 48 : 0,
-			(retry_frame >> 1) << 5,
-			48,
-			32
-		};
-		RECT_FIXED retry_dst = {
-			character->x -  FIXED_DEC(7,1) - stage.camera.x,
-			character->y - FIXED_DEC(92,1) - stage.camera.y,
-			FIXED_DEC(48,1),
-			FIXED_DEC(32,1),
-		};
-		Stage_DrawTex(&this->tex_retry, &retry_src, &retry_dst, FIXED_MUL(stage.camera.zoom, stage.bump));
-	}
-	
 	//Animate and draw character
 	Animatable_Animate(&character->animatable, (void*)this, Char_BFALT_SetFrame);
 	Character_Draw(character, &this->tex, &char_bfalt_frame[this->frame]);
@@ -341,7 +231,8 @@ Character *Char_BFALT_New(fixed_t x, fixed_t y)
 	this->arc_main = IO_Read("\\CHAR\\BFALT.ARC;1");
 	
 	const char **pathp = (const char *[]){
-		"idle.tim",
+		"idle0.tim",
+		"idle1.tim",
 		"up.tim", 
 		"left.tim",
 		"down.tim",
@@ -350,29 +241,16 @@ Character *Char_BFALT_New(fixed_t x, fixed_t y)
 		"leftmiss.tim",
 		"downmiss.tim",
 		"rmiss.tim",
+		"ban0.tim",
+		"ban1.tim",
+		"ban2.tim",
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;
 	for (; *pathp != NULL; pathp++)
 		*arc_ptr++ = Archive_Find(this->arc_main, *pathp);
 	
-	//Initialize render state
-	this->tex_id = this->frame = 0xFF;
 	
-	//Initialize player state
-	this->retry_bump = 0;
-	
-	//Copy skull fragments
-	memcpy(this->skull, char_bfalt_skull, sizeof(char_bfalt_skull));
-	this->skull_scale = 64;
-	
-	SkullFragment *frag = this->skull;
-	for (size_t i = 0; i < COUNT_OF_MEMBER(Char_BFALT, skull); i++, frag++)
-	{
-		//Randomize trajectory
-		frag->xsp += RandomRange(-4, 4);
-		frag->ysp += RandomRange(-2, 2);
-	}
 	
 	return (Character*)this;
 }
