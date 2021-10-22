@@ -22,6 +22,8 @@ enum
 	Cancer_ArcMain_Up1,
 	Cancer_ArcMain_Right0,
 	Cancer_ArcMain_Right1,
+	Cancer_ArcMain_Scream0,
+	Cancer_ArcMain_Scream1,
 	
 	Cancer_Arc_Max,
 };
@@ -57,6 +59,11 @@ static const CharFrame char_cancer_frame[] = {
 	
 	{Cancer_ArcMain_Right0, {  0,   0, 153, 145}, { 42, 202}}, //10 right 1
 	{Cancer_ArcMain_Right1, {  0,   0, 144, 143}, { 42, 201}}, //11 right 2
+
+	{Cancer_ArcMain_Scream0, {  0,   0,  99, 161}, { 42, 217}}, //12
+	{Cancer_ArcMain_Scream0, {100,   0,  99, 161}, { 42, 217}}, //13
+	{Cancer_ArcMain_Scream1, {  0,   0,  99, 154}, { 42, 210}}, //14
+	{Cancer_ArcMain_Scream1, {100,   0,  99, 154}, { 42, 210}}, //15
 };
 
 static const Animation char_cancer_anim[CharAnim_Max] = {
@@ -69,6 +76,9 @@ static const Animation char_cancer_anim[CharAnim_Max] = {
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_UpAlt
 	{2, (const u8[]){10, 11, ASCR_BACK, 1}},         //CharAnim_Right
 	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}},   //CharAnim_RightAlt
+
+	{3, (const u8[]){12, 13, 14, 15, 15, ASCR_BACK, 1}},//FUCK
+	{0, (const u8[]){ASCR_CHGANI, CharAnim_Idle}}, //FUCK2
 };
 
 //Cancer character functions
@@ -91,12 +101,30 @@ void Char_Cancer_Tick(Character *character)
 	Char_Cancer *this = (Char_Cancer*)character;
 	
 	//Perform idle dance
-	if ((character->pad_held & (INPUT_LEFT | INPUT_DOWN | INPUT_UP | INPUT_RIGHT)) == 0)
+	if ((character->pad_held & (INPUT_LEFT | INPUT_DOWN | INPUT_UP | INPUT_RIGHT)) == 0 &&
+	     character->animatable.anim != CharAnim_Fuck) //Don't interrupt "AAAAAAAAAAAAA" animation
 		Character_PerformIdle(character);
 	
 	//Animate and draw
 	Animatable_Animate(&character->animatable, (void*)this, Char_Cancer_SetFrame);
 	Character_Draw(character, &this->tex, &char_cancer_frame[this->frame]);
+
+	//if (stage.flag & STAGE_FLAG_JUST_STEP)
+    //{   //Stage specific animations
+	//	if (stage.note_scroll >= 0)
+	//	{
+	//		switch (stage.stage_id)
+	//		{
+	//			case StageId_1_4: //Infinitrigger Scream
+	//			    if ((stage.song_step) == 1784)
+	//				    character->set_anim(character, CharAnim_Fuck);
+	//				break;
+	//			default:
+	//				break;
+	//		}
+	//	}
+	//}
+	//bleh, ignore all that for now, I can't get it to play without getting interrupted by the notes.
 }
 
 void Char_Cancer_SetAnim(Character *character, u8 anim)
@@ -154,6 +182,8 @@ Character *Char_Cancer_New(fixed_t x, fixed_t y)
 		"up1.tim",
 		"right0.tim", //Cancer_ArcMain_Right
 		"right1.tim",
+		"scream0.tim",
+		"scream1.tim",
 		NULL
 	};
 	IO_Data *arc_ptr = this->arc_ptr;

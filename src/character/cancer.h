@@ -7,7 +7,7 @@
 #ifndef _CANCER_H
 #define _CANCER_H
 
-#include "../character.h"
+#include "../vrageanim.h"
 
 //Dad character functions
 Character *Char_Cancer_New(fixed_t x, fixed_t y);
