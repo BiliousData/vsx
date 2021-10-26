@@ -186,6 +186,7 @@
 			    <!-- Background art -->
                 <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
 				<file name = "wreck.arc" type = "data" source = "iso/wreck/back.arc"/>
+				<file name = "simp.arc" type = "data" source = "iso/simp/back.arc"/>
 
 				<!--Vidyagaems-->
 				<file name = "8.1e.cht" type = "data" source = "iso/chart/vidyagaems-easy.json.cht"/>

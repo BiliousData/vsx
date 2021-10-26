@@ -39,6 +39,7 @@ all: \
 	iso/week7/back.arc \
 	iso/vtown/back.arc \
 	iso/wreck/back.arc \
+	iso/simp/back.arc \
 
 iso/%.tim: iso/%.png
 	tools/funkintimconv/funkintimconv $@ $<
@@ -122,3 +123,5 @@ iso/week7/back.arc: iso/week7/back0.tim iso/week7/back1.tim iso/week7/back2.tim 
 iso/vtown/back.arc: iso/vtown/back0.tim iso/vtown/back1.tim
 
 iso/wreck/back.arc: iso/wreck/back.tim
+
+iso/simp/back.arc: iso/simp/back.tim
