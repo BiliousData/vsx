@@ -70,13 +70,13 @@
 				<file name = "back.arc" type = "data" source = "iso/week2/back.arc"/>
 				
 				<!-- Spookeez charts -->
-				<file name = "2.1e.cht" type = "data" source = "iso/chart/spookeez-easy.json.cht"/>
-				<file name = "2.1n.cht" type = "data" source = "iso/chart/spookeez.json.cht"/>
-				<file name = "2.1h.cht" type = "data" source = "iso/chart/spookeez-hard.json.cht"/>
+				<file name = "2.1e.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
+				<file name = "2.1n.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
+				<file name = "2.1h.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
 				<!-- South charts -->
-				<file name = "2.2e.cht" type = "data" source = "iso/chart/south-easy.json.cht"/>
-				<file name = "2.2n.cht" type = "data" source = "iso/chart/south.json.cht"/>
-				<file name = "2.2h.cht" type = "data" source = "iso/chart/south-hard.json.cht"/>
+				<file name = "2.2e.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
+				<file name = "2.2n.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
+				<file name = "2.2h.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
 				<!-- Monster charts -->
 				<file name = "2.3e.cht" type = "data" source = "iso/chart/monster-easy.json.cht"/>
 				<file name = "2.3n.cht" type = "data" source = "iso/chart/monster.json.cht"/>
@@ -209,9 +209,9 @@
 				<file name = "8.5n.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
 				<file name = "8.5h.cht" type = "data" source = "iso/chart/nogames-hard.json.cht"/>
 				<!--Sneed-->
-				<file name = "8.6e.cht" type = "data" source = "iso/chart/sneed-easy.json.cht"/>
-				<file name = "8.6n.cht" type = "data" source = "iso/chart/sneed.json.cht"/>
-				<file name = "8.6h.cht" type = "data" source = "iso/chart/sneed-hard.json.cht"/>
+				<file name = "8.6e.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
+				<file name = "8.6n.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
+				<file name = "8.6h.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
 			</dir>
 			
 			<!-- Kapi assets -->
@@ -289,6 +289,9 @@
 
 				<!-- Cancer Lord assets -->
 				<file name = "cancer.arc" type = "data" source = "iso/cancer/main.arc"/>
+
+				<!-- Zooooorrrd -->
+				<file name = "zord.arc" type = "data" source = "iso/zord/main.arc"/>
 			</dir>
 			
 			<!-- Music -->

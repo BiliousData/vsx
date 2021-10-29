@@ -60,10 +60,10 @@
 		StageId_1_4, 0
 	},
 	
-	{ //StageId_2_1 (Spookeez)
+	{ //StageId_2_1 (nogames)
 		//Characters
 		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(85,1)},
-		{Char_Spook_New,  FIXED_DEC(-90,1),   FIXED_DEC(85,1)},
+		{Char_Zord_New,  FIXED_DEC(-110,1),   FIXED_DEC(0,1)},
 		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
@@ -76,14 +76,14 @@
 		
 		StageId_2_1, 0,
 	},
-	{ //StageId_2_2 (South)
+	{ //StageId_2_2 (Sneed)
 		//Characters
 		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(85,1)},
-		{Char_Spook_New,  FIXED_DEC(-90,1),   FIXED_DEC(85,1)},
+		{Char_Dad_New,  FIXED_DEC(-90,1),   FIXED_DEC(85,1)},
 		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
 		
 		//Stage background
-		Back_Dummy_New,
+		Back_Simp_New,
 		
 		//Song info
 		{FIXED_DEC(11,10),FIXED_DEC(15,10),FIXED_DEC(22,10)},

@@ -30,6 +30,7 @@ all: \
 	iso/vrage/main.arc \
 	iso/vcalm/main.arc \
 	iso/cancer/main.arc \
+	iso/zord/main.arc \
 	iso/week1/back.arc \
 	iso/week2/back.arc \
 	iso/week3/back.arc \
@@ -99,6 +100,9 @@ iso/vcalm/main.arc: iso/vcalm/idle0.tim iso/vcalm/idle1.tim iso/vcalm/left.tim i
 
 # Cancer Lord
 iso/cancer/main.arc: iso/cancer/idle0.tim iso/cancer/idle1.tim iso/cancer/left.tim iso/cancer/right0.tim iso/cancer/right1.tim iso/cancer/up0.tim iso/cancer/up1.tim iso/cancer/down.tim iso/cancer/scream0.tim iso/cancer/scream1.tim
+
+# Consolezord
+iso/zord/main.arc: iso/zord/idle0.tim iso/zord/idle1.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim
