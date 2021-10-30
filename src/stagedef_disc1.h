@@ -80,7 +80,7 @@
 		//Characters
 		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(85,1)},
 		{Char_Dad_New,  FIXED_DEC(-90,1),   FIXED_DEC(85,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
+		{Char_Sneed_New,       FIXED_DEC(0,1),  FIXED_DEC(50,1)},
 		
 		//Stage background
 		Back_Simp_New,

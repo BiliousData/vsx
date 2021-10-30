@@ -31,6 +31,7 @@ all: \
 	iso/vcalm/main.arc \
 	iso/cancer/main.arc \
 	iso/zord/main.arc \
+	iso/sneed/main.arc \
 	iso/week1/back.arc \
 	iso/week2/back.arc \
 	iso/week3/back.arc \
@@ -103,6 +104,9 @@ iso/cancer/main.arc: iso/cancer/idle0.tim iso/cancer/idle1.tim iso/cancer/left.t
 
 # Consolezord
 iso/zord/main.arc: iso/zord/idle0.tim iso/zord/idle1.tim
+
+# sneed
+iso/sneed/main.arc: iso/sneed/idle0.tim iso/sneed/idle1.tim iso/sneed/left.tim iso/sneed/down.tim iso/sneed/up.tim iso/sneed/right.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim

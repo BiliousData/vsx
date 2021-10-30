@@ -292,6 +292,9 @@
 
 				<!-- Zooooorrrd -->
 				<file name = "zord.arc" type = "data" source = "iso/zord/main.arc"/>
+
+				<!-- Sneed -->
+				<file name = "sneed.arc" type = "data" source = "iso/sneed/main.arc"/>
 			</dir>
 			
 			<!-- Music -->
