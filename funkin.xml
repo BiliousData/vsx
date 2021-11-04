@@ -42,7 +42,7 @@
 				<file name = "hud0sick.tim" type = "data" source = "iso/stage/hud0cancer.tim"/>
 			</dir>
 			
-			<!-- Week /v/ assets -->
+			<!-- Week /v/ part one assets -->
             <dir name = "week1">
                 <!-- Background art -->
                 <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
@@ -64,23 +64,23 @@
         	    <file name = "1.4h.cht" type = "data" source = "iso/chart/infinitrigger-hard.json.cht"/>
             </dir>
 			
-			<!-- Week 2 assets -->
+			<!-- Week /v/ bonus assets -->
 			<dir name = "week2">
 				<!-- Background art -->
 				<file name = "back.arc" type = "data" source = "iso/week2/back.arc"/>
 				
-				<!-- Spookeez charts -->
+				<!-- nogames charts -->
 				<file name = "2.1e.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
 				<file name = "2.1n.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
 				<file name = "2.1h.cht" type = "data" source = "iso/chart/nogames.json.cht"/>
-				<!-- South charts -->
+				<!-- Sneed charts -->
 				<file name = "2.2e.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
 				<file name = "2.2n.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
 				<file name = "2.2h.cht" type = "data" source = "iso/chart/chuck.json.cht"/>
-				<!-- Monster charts -->
-				<file name = "2.3e.cht" type = "data" source = "iso/chart/monster-easy.json.cht"/>
-				<file name = "2.3n.cht" type = "data" source = "iso/chart/monster.json.cht"/>
-				<file name = "2.3h.cht" type = "data" source = "iso/chart/monster-hard.json.cht"/>
+				<!-- Birthday charts -->
+				<file name = "2.3e.cht" type = "data" source = "iso/chart/birthday.json.cht"/>
+				<file name = "2.3n.cht" type = "data" source = "iso/chart/birthday.json.cht"/>
+				<file name = "2.3h.cht" type = "data" source = "iso/chart/birthday.json.cht"/>
 				<!-- Clucked charts -->
 				<file name = "2.4h.cht" type = "data" source = "iso/chart/clucked-hard.json.cht"/>
 			</dir>
@@ -181,12 +181,13 @@
 				<file name = "7.3p.cht" type = "data" source = "iso/week7/picospeaker.json.cht"/>
 			</dir>
 
-			<!-- Old Week /v/ remnants -->
+			<!-- Old Week /v/ remnants still used for stages -->
 			<dir name = "week8">
 			    <!-- Background art -->
                 <file name = "back.arc" type = "data" source = "iso/vtown/back.arc"/>
 				<file name = "wreck.arc" type = "data" source = "iso/wreck/back.arc"/>
 				<file name = "simp.arc" type = "data" source = "iso/simp/back.arc"/>
+                <file name = "cave.arc" type = "data" source = "iso/cave/back.arc"/>
 
 				<!--Vidyagaems-->
 				<file name = "8.1e.cht" type = "data" source = "iso/chart/vidyagaems-easy.json.cht"/>
@@ -306,6 +307,8 @@
 				<file name = "vb.xa" type = "xa" source = "iso/music/vb.xa"/>
 				<dummy sectors="128"/>
 				<file name = "vc.xa" type = "xa" source = "iso/music/vc.xa"/>
+				<dummy sectors="128"/>
+				<file name = "vd.xa" type = "xa" source = "iso/music/vd.xa"/>
 				<dummy sectors="128"/>
 			</dir>
 			

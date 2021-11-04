@@ -92,19 +92,19 @@
 		
 		StageId_2_2, 0,
 	},
-	{ //StageId_2_3 (Monster)
+	{ //StageId_2_3 (Birthday)
 		//Characters
-		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(85,1)},
-		{Char_Spook_New,  FIXED_DEC(-90,1),   FIXED_DEC(85,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(-15,1)},
+		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(25,1)},
+		{Char_Dad_New,  FIXED_DEC(-90,1),   FIXED_DEC(25,1)},
+		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(500,1)},
 		
 		//Stage background
-		Back_Week2_New,
+		Back_Cave_New,
 		
 		//Song info
-		{FIXED_DEC(13,10),FIXED_DEC(13,10),FIXED_DEC(16,10)},
+		{FIXED_DEC(27,10),FIXED_DEC(27,10),FIXED_DEC(27,10)},
 		2, 3,
-		XA_Sage, 0,
+		XA_Birthday, 0,
 		
 		StageId_2_3, 0
 	},

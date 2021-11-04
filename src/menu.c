@@ -709,6 +709,7 @@ void Menu_Tick(void)
 				{StageId_1_4, 0x662591, "INFINITRIGGER", false},
 				{StageId_2_1, 0x28C2CC, "NOGAMES", false},
 				{StageId_2_2, 0xC6BD0F, "SNEED", false},
+				{StageId_2_3, 0x0D6D22, "BIRTHDAY", false},
 			};
 			
 			//Initialize page

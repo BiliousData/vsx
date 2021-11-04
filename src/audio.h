@@ -16,6 +16,7 @@ typedef enum
 	XA_Va,     //VA.XA
 	XA_Vb,     //VB.XA
 	XA_Vc,     //VC.XA
+	XA_Vd,
 	
 	XA_Max,
 } XA_File;
@@ -34,6 +35,8 @@ typedef enum
 	//VC.XA
 	XA_Nogames,
 	XA_Sneed,
+	//VD.XA
+	XA_Birthday,
 	
 	XA_TrackMax,
 } XA_Track;

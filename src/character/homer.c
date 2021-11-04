@@ -38,10 +38,12 @@ static SkullFragment char_homer_skull[15] = {
 enum
 {
 	Homer_ArcMain_Idle0,
+	Homer_ArcMain_Idle1,
 	Homer_ArcMain_Hit0,  //Left Down
 	Homer_ArcMain_Miss0, //Left Down
 	Homer_ArcMain_Hit1,  //Up Right
 	Homer_ArcMain_Miss1, //Up Right
+	HOmer_ArcMain_Hit2,
 	Homer_ArcMain_Peace,
 	Homer_ArcMain_Dead0, //BREAK
 	
@@ -80,49 +82,31 @@ typedef struct
 
 //Boyfriend player definitions
 static const CharFrame char_homer_frame[] = {
-	{Homer_ArcMain_Idle0, {  0,   0, 128, 128}, { 53,  92}}, //0 idle 1
-	{Homer_ArcMain_Idle0, {128,   0, 128, 128}, { 53,  93}}, //1 idle 2
-	{Homer_ArcMain_Idle1, {  0, 128, 128, 128}, { 53,  98}}, //2 idle 3
-	{Homer_ArcMain_Idle1, {128, 128, 128, 128}, { 53,  98}}, //3 idle 4
+	{Homer_ArcMain_Idle0, {  0,   0,  70, 152}, { 42, 183}}, //0 idle 1
+	{Homer_ArcMain_Idle0, { 71,   0,  70, 152}, { 42, 183}}, //1 idle 2
+	{Homer_ArcMain_Idle0, {142,   0,  70, 152}, { 42, 183}}, //2 idle 3
+	{Homer_ArcMain_Idle1, {  0,   0, 128, 128}, { 42, 183}}, //3 idle 4
 	
-	{Homer_ArcMain_Hit0,  {  0,   0, 128, 128}, { 56,  94}}, //4 left 1
-	{Homer_ArcMain_Hit0,  {128,   0, 128, 128}, { 56,  94}}, //5 left 2
-	{Homer_ArcMain_Miss0, {  0,   0, 128, 128}, { 52, 102}}, //6 left miss 1
-	{Homer_ArcMain_Miss0, {128,   0, 128, 128}, { 53, 102}}, //7 left miss 2
+	{Homer_ArcMain_Hit0,  {  0,   0, 128, 128}, { 42, 183}}, //4 left 1
+	{Homer_ArcMain_Hit0,  {128,   0, 128, 128}, { 42, 183}}, //5 left 2
+	{Homer_ArcMain_Miss0, {  0,   0, 128, 128}, { 42, 183}}, //6 left miss 1
+	{Homer_ArcMain_Miss0, {128,   0, 128, 128}, { 42, 183}}, //7 left miss 2
 	
-	{Homer_ArcMain_Hit0,  {  0, 128, 128, 128}, { 50,  82}}, //8 down 1
-	{Homer_ArcMain_Hit0,  {128, 128, 128, 128}, { 50,  83}}, //9 down 2
-	{Homer_ArcMain_Miss0, {  0, 128, 128, 128}, { 49,  90}}, //10 down miss 1
-	{Homer_ArcMain_Miss0, {128, 128, 128, 128}, { 50,  90}}, //11 down miss 2
+	{Homer_ArcMain_Hit0,  {  0, 128, 128, 128}, { 42, 183}}, //8 down 1
+	{Homer_ArcMain_Hit0,  {128, 128, 128, 128}, { 42, 183}}, //9 down 2
+	{Homer_ArcMain_Miss0, {  0, 128, 128, 128}, { 42, 183}}, //10 down miss 1
+	{Homer_ArcMain_Miss0, {128, 128, 128, 128}, { 42, 183}}, //11 down miss 2
 	
-	{Homer_ArcMain_Hit1,  {  0,   0, 128, 128}, { 42, 103}}, //12 up 1
-	{Homer_ArcMain_Hit1,  {128,   0, 128, 128}, { 44, 102}}, //13 up 2
-	{Homer_ArcMain_Miss1, {  0,   0, 128, 128}, { 48,  99}}, //14 up miss 1
-	{Homer_ArcMain_Miss1, {128,   0, 128, 128}, { 48, 100}}, //15 up miss 2
+	{Homer_ArcMain_Hit1,  {  0,   0, 128, 128}, { 42, 183}}, //12 up 1
+	{Homer_ArcMain_Hit1,  {128,   0, 128, 128}, { 42, 183}}, //13 up 2
+	{Homer_ArcMain_Miss1, {  0,   0, 128, 128}, { 42, 183}}, //14 up miss 1
+	{Homer_ArcMain_Miss1, {128,   0, 128, 128}, { 42, 183}}, //15 up miss 2
 	
-	{Homer_ArcMain_Hit1,  {  0, 128, 128, 128}, { 42,  94}}, //16 right 1
-	{Homer_ArcMain_Hit1,  {128, 128, 128, 128}, { 42,  95}}, //17 right 2
-	{Homer_ArcMain_Miss1, {  0, 128, 128, 128}, { 45, 102}}, //18 right miss 1
-	{Homer_ArcMain_Miss1, {128, 128, 128, 128}, { 43, 102}}, //19 right miss 2
-	
-	{Homer_ArcMain_Peace, {  0,   0, 128, 128}, { 53,  98}}, //20 peace 1
-	{Homer_ArcMain_Peace, {128,   0, 128, 128}, { 53,  97}}, //21 peace 2
-	{Homer_ArcMain_Peace, {  0, 128, 128, 128}, { 53,  97}}, //22 peace 3
-	
-	{Homer_ArcMain_Dead0, {  0,   0, 128, 128}, { 53,  98}}, //23 dead0 0
-	{Homer_ArcMain_Dead0, {128,   0, 128, 128}, { 53,  98}}, //24 dead0 1
-	{Homer_ArcMain_Dead0, {  0, 128, 128, 128}, { 53,  98}}, //25 dead0 2
-	{Homer_ArcMain_Dead0, {128, 128, 128, 128}, { 53,  98}}, //26 dead0 3
-	
-	{Homer_ArcDead_Dead1, {  0,   0, 128, 128}, { 53,  98}}, //27 dead1 0
-	{Homer_ArcDead_Dead1, {128,   0, 128, 128}, { 53,  98}}, //28 dead1 1
-	{Homer_ArcDead_Dead1, {  0, 128, 128, 128}, { 53,  98}}, //29 dead1 2
-	{Homer_ArcDead_Dead1, {128, 128, 128, 128}, { 53,  98}}, //30 dead1 3
-	
-	{Homer_ArcDead_Dead2, {  0,   0, 128, 128}, { 53,  98}}, //31 dead2 body twitch 0
-	{Homer_ArcDead_Dead2, {128,   0, 128, 128}, { 53,  98}}, //32 dead2 body twitch 1
-	{Homer_ArcDead_Dead2, {  0, 128, 128, 128}, { 53,  98}}, //33 dead2 balls twitch 0
-	{Homer_ArcDead_Dead2, {128, 128, 128, 128}, { 53,  98}}, //34 dead2 balls twitch 1
+	{Homer_ArcMain_Hit1,  {  0, 128, 128, 128}, { 42, 183}}, //16 right 1
+	{Homer_ArcMain_Hit1,  {128, 128, 128, 128}, { 42, 183}}, //17 right 2
+	{Homer_ArcMain_Miss1, {  0, 128, 128, 128}, { 42, 183}}, //18 right miss 1
+	{Homer_ArcMain_Miss1, {128, 128, 128, 128}, { 42, 183}}, //19 right miss 2
+
 };
 
 static const Animation char_homer_anim[PlayerAnim_Max] = {

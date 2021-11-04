@@ -75,6 +75,7 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "stage/vtown.h"
 #include "stage/wreck.h"
 #include "stage/simp.h"
+#include "stage/cave.h"
 
 static const StageDef stage_defs[StageId_Max] = {
 	#include "stagedef_disc1.h"
@@ -1605,28 +1606,21 @@ void Stage_Tick(void)
 			}
 			
 			//Hardcoded stage stuff
-			//switch (stage.stage_id)
-			//{
-			//	case StageId_1_2: //Fresh GF bop
-			//		switch (stage.song_step)
-			//		{
-			//			case 16 << 2:
-			//				stage.gf_speed = 2 << 2;
-			//				break;
-			//			case 48 << 2:
-			//				stage.gf_speed = 1 << 2;
-			//				break;
-			//			case 80 << 2:
-			//				stage.gf_speed = 2 << 2;
-			//				break;
-			//			case 112 << 2:
-			//				stage.gf_speed = 1 << 2;
-			//				break;
-			//		}
-			//		break;
-			//	default:
-			//		break;
-			//}
+			//hmm I wondah
+			switch (stage.stage_id)
+			{
+				case StageId_2_3: //Birthday long ass bops
+					switch (stage.song_step)
+					{
+						case 0:
+							stage.bf_speed = 5 << 2;
+							stage.dad_speed = 5 << 2;
+							break;
+					}
+					break;
+				default:
+					break;
+			}
 			
 			//Draw stage foreground
 			if (stage.back->draw_fg != NULL)
