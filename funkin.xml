@@ -296,6 +296,9 @@
 
 				<!-- Sneed -->
 				<file name = "sneed.arc" type = "data" source = "iso/sneed/main.arc"/>
+
+				<!-- Yotsuba -->
+				<file name = "yots.arc" type = "data" source = "iso/yotsuba/main.arc"/>
 			</dir>
 			
 			<!-- Music -->

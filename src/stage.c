@@ -64,6 +64,7 @@ static const u16 note_key[] = {INPUT_LEFT, INPUT_DOWN, INPUT_UP, INPUT_RIGHT};
 #include "character/cancer.h"
 #include "character/zord.h"
 #include "character/sneed.h"
+#include "character/yots.h"
 
 #include "stage/dummy.h"
 #include "stage/week1.h"
@@ -292,7 +293,7 @@ static void Stage_MissNote(PlayerState *this)
 	if (this->combo)
 	{
 		//Kill combo
-		if (this->combo > 5)
+		if (stage.gf != NULL && this->combo > 5)
 			stage.gf->set_anim(stage.gf, CharAnim_Down); //Cry if we lost a large combo
 		this->combo = 0;
 		
@@ -902,7 +903,10 @@ static void Stage_LoadGirlfriend(void)
 {
 	//Load girlfriend character
 	Character_Free(stage.gf);
-	stage.gf = stage.stage_def->gchar.new(stage.stage_def->gchar.x, stage.stage_def->gchar.y);
+	if (stage.stage_def->gchar.new != NULL)
+		stage.gf = stage.stage_def->gchar.new(stage.stage_def->gchar.x, stage.stage_def->gchar.y);
+	else
+		stage.gf = NULL;
 }
 
 static void Stage_LoadStage(void)
@@ -1038,6 +1042,9 @@ static void Stage_LoadMusic(void)
 	//Offset sing ends
 	stage.player->sing_end -= stage.note_scroll;
 	stage.opponent->sing_end -= stage.note_scroll;
+	if (stage.gf != NULL)
+		stage.gf->sing_end -= stage.note_scroll;
+	
 	
 	//Find music file and begin seeking to it
 	Audio_SeekXA_Track(stage.stage_def->music_track);
@@ -1052,6 +1059,8 @@ static void Stage_LoadMusic(void)
 	//Offset sing ends again
 	stage.player->sing_end += stage.note_scroll;
 	stage.opponent->sing_end += stage.note_scroll;
+	if (stage.gf != NULL)
+		stage.gf->sing_end += stage.note_scroll;
 }
 
 static void Stage_LoadState(void)
@@ -1638,8 +1647,8 @@ void Stage_Tick(void)
 				stage.back->draw_md(stage.back);
 			
 			//Tick girlfriend
-			stage.gf->tick(stage.gf);
-			
+			if (stage.gf != NULL)
+				stage.gf->tick(stage.gf);
 			//Tick background objects
 			ObjectList_Tick(&stage.objlist_bg);
 			

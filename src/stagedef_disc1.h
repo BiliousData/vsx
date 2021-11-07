@@ -94,9 +94,9 @@
 	},
 	{ //StageId_2_3 (Birthday)
 		//Characters
-		{Char_BF_New,      FIXED_DEC(56,1),   FIXED_DEC(25,1)},
+		{Char_Yots_New,      FIXED_DEC(56,1),   FIXED_DEC(25,1)},
 		{Char_Dad_New,  FIXED_DEC(-90,1),   FIXED_DEC(25,1)},
-		{Char_GF_New,       FIXED_DEC(0,1),  FIXED_DEC(500,1)},
+		{NULL,       FIXED_DEC(0,1),  FIXED_DEC(500,1)},
 		
 		//Stage background
 		Back_Cave_New,

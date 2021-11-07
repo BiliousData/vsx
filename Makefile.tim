@@ -32,6 +32,7 @@ all: \
 	iso/cancer/main.arc \
 	iso/zord/main.arc \
 	iso/sneed/main.arc \
+	iso/yotsuba/main.arc \
 	iso/week1/back.arc \
 	iso/week2/back.arc \
 	iso/week3/back.arc \
@@ -108,6 +109,9 @@ iso/zord/main.arc: iso/zord/idle0.tim iso/zord/idle1.tim
 
 # sneed
 iso/sneed/main.arc: iso/sneed/idle0.tim iso/sneed/idle1.tim iso/sneed/left.tim iso/sneed/down.tim iso/sneed/up.tim iso/sneed/right.tim
+
+# yotsuba
+iso/yotsuba/main.arc: iso/yotsuba/hit0.tim iso/yotsuba/hit1.tim iso/yotsuba/miss.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim

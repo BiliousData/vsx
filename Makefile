@@ -51,6 +51,7 @@ SRCS = src/main.c \
        src/character/cancer.c \
        src/character/zord.c \
        src/character/sneed.c \
+       src/character/yots.c \
        src/object.c \
        src/object/combo.c \
        src/object/splash.c \
